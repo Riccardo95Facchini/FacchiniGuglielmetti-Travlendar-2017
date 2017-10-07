@@ -1,0 +1,65 @@
+\input{commandsFile}
+
+\begin{document}
+
+%Custom title page
+\begin{titlepage}
+\centering
+\includegraphics[scale=0.75]{Img/PolimiLogo}
+\par\vspace{6cm}
+{\textcolor{Blue}{\textbf{{\Huge Travlendar+ project}}}}
+\par\vspace{1cm}
+{\textcolor{Blue}{\textbf{{\Large Requirement Analysis and Specification Document}}}}
+\par\vspace{3cm}
+	
+{\Large Riccardo Facchini\\ \Large Andrea Guglielmetti}
+\par\vfill
+{\large\today}
+\end{titlepage}
+
+%Deliverable specific information----------------------------------
+\clearpage
+\section*{Deliverable specific information}
+\addcontentsline{toc}{section}{Deliverable specific information}
+\begin{tabular}{ll}
+\hline
+\textbf{Deliverable:} & RASD\\
+\textbf{Title:} & Requirement Analysis and Verification Document \\
+\textbf{Authors:} & Riccardo Facchini - Andrea Guglielmetti \\
+\textbf{Version:} & 0.1 \\ 
+\textbf{Date:} & \today \\
+\textbf{Download page:} & \url{https://github.com/Riccardo95Facchini/FacchiniGuglielmetti.git} \\
+\textbf{Copyright:} & Copyright © 2017, Riccardo Facchini - Andrea Guglielmetti – All rights reserved \\
+\hline
+\end{tabular}
+\setcounter{page}{1}
+
+%Table of contents------------------------------------------------------
+\newpage
+\tableofcontents
+\addcontentsline{toc}{section}{Table of Contents}
+
+\newpage
+\listoffigures
+\addcontentsline{toc}{section}{List of Figures}
+
+\listoftables
+\addcontentsline{toc}{section}{List of Tables}
+
+%INTRODUCTION---------------------------------------------------
+\clearpage
+{\color{Blue}{\section{Introduction}}}
+\label{sect:Introduction}
+\input{Files/Introduction}
+
+%Product Perspective---------------------------------------------------
+\clearpage
+{\color{Blue}{\section{Product Perspective}}}
+\label{sect:Product Perspective}
+\input{Files/ProductPerspective}
+
+
+
+
+
+\end{document}
