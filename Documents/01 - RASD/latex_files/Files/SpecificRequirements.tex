@@ -1,0 +1,38 @@
+\subsection{External Requirements}
+
+\subsubsection{User Interfaces}
+The user interfaces must be user-friendly, to provide an easy access to the system functionalities.\par
+To perform this the followings constrains must be satisfied:
+\begin{itemize}
+	\item The first page must always ask the user to login or register to service.
+	\item After the login, the system redirects the user to his/her home page.
+	\item (Web) A toolbar must be present in every page, except login and registration page.
+	\item (Mobile) A toolbar must be present in the homepage.
+	\item The \emph{Create a meeting} page must provide a guided process to set-up a meeting and clearly show if the created meeting is not reachable in time from the location of a previous appointment.
+	\item The \emph{Manage meetings} page must show a list of user's meetings divided by day and hour, and allows the user to choose a meeting to obtain further information.
+	\item The interface must offer the possibility to choose between a set of different languages.
+	\item The user interface must dynamically adapt to the screen size.
+	\item The Mobile and Web application must use the same graphical elements.
+\end{itemize}
+In addition to these constraints, other platform-dependent constraints are provided:
+\begin{itemize}
+	\item Web Application\par
+		All the pages must submit to W3C standards.
+	\item Mobile Application\par
+		All mobile versions must follow the design guidelines provided by the respective platform manufacturer (Android, iOS, Windows \dots).
+\end{itemize}
+
+\subsubsection{Hardware Interfaces}
+The system must be able to communicate with the GPS module of the smartphone to track the user's movements.
+
+\subsubsection{Software Interfaces}
+The server side of the application requires: 
+\begin{itemize}
+	\item \href{http://www.oracle.com/technetwork/java/javaee/overview/index.html}{Java EE}, to write the server application that perform the travel computation and the database access.
+	\item \href{https://dev.mysql.com/}{MySQL}, to memorize user information and meetings.
+\end{itemize}
+The client side of the application requires the latest version of the platform SDK.
+
+\subsubsection{Communication Interfaces}
+The client communicates to the server via HTTPS protocol using TCP.\par
+In addition, the system must be able to use the API of other application in order to retrieves weather and news about road conditions or strike.

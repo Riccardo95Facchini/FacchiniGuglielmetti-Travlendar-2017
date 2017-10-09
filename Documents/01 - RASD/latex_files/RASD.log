@@ -1,11 +1,11 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/W32TeX) (preloaded format=pdflatex 2017.10.6)  7 OCT 2017 16:34
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/W32TeX) (preloaded format=pdflatex 2017.10.5)  9 OCT 2017 16:17
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
 **./RASD.tex
 (./RASD.tex
 LaTeX2e <2017-04-15>
-Babel <3.14> and hyphenation patterns for 84 language(s) loaded.
+Babel <3.13> and hyphenation patterns for 84 language(s) loaded.
 (./commandsFile.tex (c:/texlive/2017/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
 (c:/texlive/2017/texmf-dist/tex/latex/base/size11.clo
@@ -1158,7 +1158,7 @@ LaTeX Info: Redefining \nameref on input line 3.
 \openout4 = `RASD.out'.
 
  ABD: EveryShipout initializing macros
-<Img/PolimiLogo.png, id=63, 405.515pt x 125.46875pt>
+<Img/PolimiLogo.png, id=87, 405.515pt x 125.46875pt>
 File: Img/PolimiLogo.png Graphic file (type png)
 <use Img/PolimiLogo.png>
 Package pdftex.def Info: Img/PolimiLogo.png  used on input line 8. on input lin
@@ -1229,27 +1229,20 @@ been already used, duplicate ignored
 l.38 \newpage
               [1
 
-]
-
-Package hyperref Warning: old toc file detected, not used; run LaTeX again.
-
+] (./RASD.toc)
 \tf@toc=\write5
 \openout5 = `RASD.toc'.
 
-[2]
-
-Package hyperref Warning: old lof file detected, not used; run LaTeX again.
-
+ [2] (./RASD.lof)
 \tf@lof=\write6
 \openout6 = `RASD.lof'.
 
-
-Package hyperref Warning: old lot file detected, not used; run LaTeX again.
-
+ (./RASD.lot)
 \tf@lot=\write7
 \openout7 = `RASD.lot'.
 
-[3] (./Files/Introduction.tex
+ [3]
+(./Files/Introduction.tex
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <12> not available
 (Font)              Font shape `T1/ptm/b/n' tried instead on input line 1.
  [4
@@ -1257,37 +1250,36 @@ LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <12> not available
 ] [5]) [6] (./Files/ProductPerspective.tex)
 [7
 
+] (./Files/SpecificRequirements.tex) [8
+
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 65.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 65.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 71.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 71.
  (./RASD.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 65.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 65.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 71.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 71.
 Package rerunfilecheck Info: File `RASD.out' has not changed.
-(rerunfilecheck)             Checksum: 7ABC22747B919D089D5E7E86821A799E;872.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 65.
+(rerunfilecheck)             Checksum: 8F3B653A7065DFAC6C305AA0D307CCAC;1317.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 71.
  ) 
 Here is how much of TeX's memory you used:
- 20109 strings out of 492990
- 368442 string characters out of 6136334
- 439103 words of memory out of 5000000
- 23224 multiletter control sequences out of 15000+600000
- 41139 words of font info for 60 fonts, out of 8000000 for 9000
+ 20136 strings out of 492990
+ 368868 string characters out of 6136334
+ 440318 words of memory out of 5000000
+ 23233 multiletter control sequences out of 15000+600000
+ 43987 words of font info for 62 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  59i,15n,65p,555b,360s stack positions out of 5000i,500n,10000p,200000b,80000s
-{c:/texlive/2017/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{c:/texlive/2017/tex
-mf-dist/fonts/enc/dvips/base/8r.enc}<c:/texlive/2017/texmf-dist/fonts/type1/pub
+{c:/texlive/2017/texmf-dist/fonts/enc/dvips/base/8r.enc}{c:/texlive/2017/texm
+f-dist/fonts/enc/dvips/lm/lm-ec.enc}<c:/texlive/2017/texmf-dist/fonts/type1/pub
 lic/amsfonts/cm/cmsy10.pfb><c:/texlive/2017/texmf-dist/fonts/type1/public/lm/lm
 tt10.pfb><c:/texlive/2017/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><c:/texli
-ve/2017/texmf-dist/fonts/type1/urw/times/utmr8a.pfb>
-Output written on RASD.pdf (8 pages, 81644 bytes).
+ve/2017/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><c:/texlive/2017/texmf-dist
+/fonts/type1/urw/times/utmri8a.pfb>
+Output written on RASD.pdf (9 pages, 93871 bytes).
 PDF statistics:
- 132 PDF objects out of 1000 (max. 8388607)
- 114 compressed objects within 2 object streams
- 25 named destinations out of 1000 (max. 500000)
- 130 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 187 PDF objects out of 1000 (max. 8388607)
+ 167 compressed objects within 2 object streams
+ 32 named destinations out of 1000 (max. 500000)
+ 178 words of extra memory for PDF output out of 10000 (max. 10000000)
 
