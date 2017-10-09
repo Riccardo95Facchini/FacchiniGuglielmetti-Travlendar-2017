@@ -1,0 +1,32 @@
+\subsection{Product Perspective}
+The system will have three main parts:
+\begin{enumerate}
+\item Mobile application version for phones and tablets.
+\item Web browser version.
+\item Backend structure to support the functioning of the service.
+\end{enumerate}
+While the backend structure is needed for the functioning of the service provided, only one of the two applications is needed to interact with the system.\\
+APIs for each component must be provided in order to allow future development and introduction of new functionalities like an automated system for buying of public transportation vehicles.\par
+\subsection{Product Functions}
+The system allows each user to create their personal calendar by specifying place and time of each appointment and then view the proposed solution, to be more specific the user can:
+Register to the system with username and password.
+\begin{enumerate}
+\item Logging to the service.
+\item Manage the information of an account and delete it.
+\item Specify means of travel preferences.
+\item Create an appointment in the calendar.
+\item Manage information about appointments and delete them.
+\item Schedule flexible lunch/breaks of specific length in a given interval.
+\end{enumerate}
+\par
+\subsection{User Characteristics}
+The users interested in using the system should be at least familiar with the concept of navigating a web page and using a smartphone in the day to day routine without needing any technical competence regarding the topic, they must be aware of the laws regarding the public circulation on the streets of the country they wish to use the services provided and need a valid driver licence if they want to use a car and they must possess an electronic payment method to use third party car/bike sharing options.
+\par
+\subsection{User Characteristics}
+We assume that the following statements are true:
+It exists a combination of means of transportation that will take the user to his/her destination even if not before the desired time.
+The GPS location of the user is always correct.
+Weather forecasts have a 100% accuracy.
+Public transportations always arrive on time.
+Internet connection is never lost.
+Is possible to integrate the system with already existing application from third party companies and public transportations.

@@ -51,7 +51,6 @@ Without taking into consideration the speed of the internet connection, in order
 \subsubsection{Standards Compliance}
 
 \subsubsection{Hardware Limitations}
-\label{sec:HardwareLimitations}
 Minimum system requirements for the two applications:
 \begin{itemize}
 \item Web application
@@ -66,7 +65,9 @@ Minimum system requirements for the two applications:
 \item 3G UMTS internet connections.
 \item 100Mb of free space.
 \end{itemize}
+
 \end{itemize}
+\label{sec:HardwareLimitations}
 
 \subsubsection{Other Constraints}
 

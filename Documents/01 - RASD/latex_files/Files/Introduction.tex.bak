@@ -24,19 +24,28 @@ What follows is the list of all the main terms and abbreviations used in the doc
 \item \textbf{Travel}: synonymous of trip.
 \item \textbf{System}: All the software needed to deliver all the functionalities desired, often used as a synonymous of Travlendar+.
 \end{itemize}
+\subsubsection{Acronyms}
 \begin{itemize}
 \item \textbf{RASD}: Requirement Analysis and Specification Document
-\item \textbf{SRS}: Software Requirement Specification. Synonymous of RASD.
-\item \textbf{ETA}: Estimated Time of Arrival.
+\item \textbf{SRS}: Software Requirement Specification. Synonymous of RASD
+\item \textbf{ETA}: Estimated Time of Arrival
 \item \textbf{GPS}: Global Positioning System
+\item \textbf{W3C}: World Wide Web Consortium
+\item \textbf{HTTP}: HyperText Transfer Protocol 
+\item \textbf{HTTPS}: HyperText Transfer Protocol over Secure Socket Layer 
+\item \textbf{SDK}: Software Development Kit
+\item \textbf{TCP}: Transfer Control Protocol
+\item \textbf{API}: Application Programming Interface
+\item \textbf{RAM}: Random Access Memory
+\item \textbf{UMTS}: Universal Mobile Telecommunications System
 \end{itemize}
 \subsubsection{Abbreviations}
-No other abbreviations were used.
+No other abbreviations aside from acronyms were used.
 \subsubsection{Revision History}
 \begin{itemize}
-\item \date{07/10/2017} Introduction.
+\item 07/10/2017 Introduction.
+\item 09/10/2017 Product perspective and Specific requirements.
 \end{itemize}
-\newpage
 \subsection{Reference documents}
 \begin{itemize}
 \item Document of the assignment: Mandatory Project Assignments.pdf
