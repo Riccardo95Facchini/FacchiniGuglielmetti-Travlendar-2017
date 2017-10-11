@@ -35,12 +35,13 @@
 \setcounter{page}{1}
 
 %Table of contents------------------------------------------------------
-\newpage
+\clearpage
 \tableofcontents
 \addcontentsline{toc}{section}{Table of Contents}
-\newpage
+\clearpage
 \listoffigures
 \addcontentsline{toc}{section}{List of Figures}
+\clearpage
 \listoftables
 \addcontentsline{toc}{section}{List of Tables}
 %INTRODUCTION---------------------------------------------------
@@ -48,21 +49,15 @@
 {\color{Blue}{\section{Introduction}}}
 \label{sect:Introduction}
 \input{Files/Introduction}
-
 %Product Perspective---------------------------------------------------
 \clearpage
 {\color{Blue}{\section{Overall Description}}}
 \label{sect:Overal lDescription}
 \input{Files/OverallDescription}
-
 %Specific Requirements------------------------------------------------
 \clearpage
 {\color{Blue}{\section{Specific Requirements}}}
 \label{sect:Specific Requirements}
 \input{Files/SpecificRequirements}
-
-
-
-
 
 \end{document}

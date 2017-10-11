@@ -25,6 +25,7 @@ The web application needs any personal computer connected to the internet, while
 Hardware requirements for both are later specified in \autoref{sec:HardwareLimitations}
 \clearpage
 \subsubsection{Software Interfaces}
+\label{sec:SoftwareInterfaces}
 Supported browsers for the web application should include Google Chrome, Mozilla Firefox, Opera, Safari, Internet Explorer and Edge, while the mobile application must be available on Android, iOS, Windows Phone and Blackberry OS.\\
 The server side of the application requires: 
 \begin{itemize}
@@ -46,10 +47,10 @@ Without taking into consideration the speed of the internet connection, in order
 \item No limit of schedulable appointments.
 \item At least 1000 users must be able to use the service at the same time. 
 \end{itemize}
+\newpage
 \subsection{Design Constraints}
-
 \subsubsection{Standards Compliance}
-
+The web application must comply with the standards dictated by W3C, while the mobile application must follow the Oracle guidelines for Java programming.
 \subsubsection{Hardware Limitations}
 \label{sec:HardwareLimitations}
 Minimum system requirements for the two applications:
@@ -67,7 +68,18 @@ Minimum system requirements for the two applications:
 \item 100Mb of free space.
 \end{itemize}
 \end{itemize}
-
-\subsubsection{Other Constraints}
+The system should also be able to process operations in parallel.
+\clearpage
+\subsection{Software System Attributes}
+\subsubsection{Reliability}
+Each trip plan computed given the preferences expressed by the user and the weather forecast and strikes must not differ more than 5\% from the optimal travel distance or ETA.
+\subsubsection{Availability}
+The system to be must guarantee an availability of no less than 98\%.
+\subsubsection{Safety and Privacy Constraints}
+The user oversees his/her own security while travelling and must grant access to the current location, information about former trips and personal data are stored but only the user itself has access to them.
+\subsubsection{Maintainability}
+The system must be developed in such a way that future implementation of new features and changes to existing ones can be done seamlessly, in other words the system has to be modular and scalable.
+\subsubsection{Portability}
+As already mentioned in \autoref{sec:SoftwareInterfaces} the software must be available on different configurations, it must be as environment independent as possible, meaning that it has to work on different platforms with the minimum amount of changes to the software itself.
 
 
