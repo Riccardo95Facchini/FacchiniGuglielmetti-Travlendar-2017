@@ -7,10 +7,19 @@ The system will have three main parts:
 \end{enumerate}
 While the backend structure is needed for the functioning of the service provided, only one of the two applications is needed to interact with the system.\\
 APIs for each component must be provided in order to allow future development and introduction of new functionalities like an automated system for buying of public transportation vehicles.\par
+\subsubsection*{Difference between Machine and World}
+The following is a distinction between the \textbf{Machine} and the \textbf{World}.
+\begin{enumerate}
+\item Machine: the Machine is the \textit{Product-to-be} (often also referred to as \textit{System} for short).
+\\The \textit{Machine Domain} on the other hand is everything that the Machine can operate onto, meaning that it can manipulate it or more in general it can control.
+\item World: the World is the physical world that interacts with the Machine or that it can be observed by it, it's the environment in which the System will gather information and will be affected by the actions performed.
+\end{enumerate}
+Machine and World are connected by \textit{Shared Phenomena}, the set of events of the World that are observable by the Machine and the ones the Machine can directly cause with its actions.
+\\An example of a Shared Phenomena may be something as mundane as the rain, since it's clearly an event that happens in the World and at the same time is observable by the Machine via a forecast or a weather report. 
 \subsection{Product Functions}
 The system allows each user to create their personal calendar by specifying place and time of each appointment and then view the proposed solution, to be more specific the user can:
-Register to the system with username and password.
 \begin{enumerate}
+\item Register to the system with username and password.
 \item Logging to the service.
 \item Manage the information of an account and delete it.
 \item Specify means of travel preferences.
