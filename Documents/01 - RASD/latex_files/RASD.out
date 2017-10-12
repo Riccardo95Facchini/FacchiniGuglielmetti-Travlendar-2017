@@ -24,13 +24,14 @@
 \BOOKMARK [3][-]{subsubsection.3.1.3}{Software Interfaces}{subsection.3.1}% 24
 \BOOKMARK [3][-]{subsubsection.3.1.4}{Communication Interfaces}{subsection.3.1}% 25
 \BOOKMARK [2][-]{subsection.3.2}{Functional Requirements}{section.3}% 26
-\BOOKMARK [2][-]{subsection.3.3}{Performance Requirements}{section.3}% 27
-\BOOKMARK [2][-]{subsection.3.4}{Design Constraints}{section.3}% 28
-\BOOKMARK [3][-]{subsubsection.3.4.1}{Standards Compliance}{subsection.3.4}% 29
-\BOOKMARK [3][-]{subsubsection.3.4.2}{Hardware Limitations}{subsection.3.4}% 30
-\BOOKMARK [2][-]{subsection.3.5}{Software System Attributes}{section.3}% 31
-\BOOKMARK [3][-]{subsubsection.3.5.1}{Reliability}{subsection.3.5}% 32
-\BOOKMARK [3][-]{subsubsection.3.5.2}{Availability}{subsection.3.5}% 33
-\BOOKMARK [3][-]{subsubsection.3.5.3}{Safety and Privacy Constraints}{subsection.3.5}% 34
-\BOOKMARK [3][-]{subsubsection.3.5.4}{Maintainability}{subsection.3.5}% 35
-\BOOKMARK [3][-]{subsubsection.3.5.5}{Portability}{subsection.3.5}% 36
+\BOOKMARK [3][-]{subsubsection.3.2.1}{Registration}{subsection.3.2}% 27
+\BOOKMARK [2][-]{subsection.3.3}{Performance Requirements}{section.3}% 28
+\BOOKMARK [2][-]{subsection.3.4}{Design Constraints}{section.3}% 29
+\BOOKMARK [3][-]{subsubsection.3.4.1}{Standards Compliance}{subsection.3.4}% 30
+\BOOKMARK [3][-]{subsubsection.3.4.2}{Hardware Limitations}{subsection.3.4}% 31
+\BOOKMARK [2][-]{subsection.3.5}{Software System Attributes}{section.3}% 32
+\BOOKMARK [3][-]{subsubsection.3.5.1}{Reliability}{subsection.3.5}% 33
+\BOOKMARK [3][-]{subsubsection.3.5.2}{Availability}{subsection.3.5}% 34
+\BOOKMARK [3][-]{subsubsection.3.5.3}{Safety and Privacy Constraints}{subsection.3.5}% 35
+\BOOKMARK [3][-]{subsubsection.3.5.4}{Maintainability}{subsection.3.5}% 36
+\BOOKMARK [3][-]{subsubsection.3.5.5}{Portability}{subsection.3.5}% 37
