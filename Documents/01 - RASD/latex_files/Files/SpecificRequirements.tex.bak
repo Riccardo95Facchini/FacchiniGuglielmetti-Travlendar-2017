@@ -25,6 +25,7 @@ The web application needs any personal computer connected to the internet, while
 Hardware requirements for both are later specified in \autoref{sec:HardwareLimitations}
 \clearpage
 \subsubsection{Software Interfaces}
+\label{sec:SoftwareInterfaces}
 Supported browsers for the web application should include Google Chrome, Mozilla Firefox, Opera, Safari, Internet Explorer and Edge, while the mobile application must be available on Android, iOS, Windows Phone and Blackberry OS.\\
 The server side of the application requires: 
 \begin{itemize}
@@ -35,8 +36,79 @@ The client side of the application requires the latest version of the platform S
 \subsubsection{Communication Interfaces}
 The client communicates to the server via HTTPS protocol using TCP.\\
 In addition, the system must be able to use the API of other application in order to retrieves weather and news about road conditions or strike.
+
+\clearpage
+
 \subsection{Functional Requirements}
+\subsubsection{Registration}
+\paragraph*{Purpose\\}
+The main purpose of the \emph{Registration} use case is to provide the user a service which permits the subscription to the system. The user must fill a registration form with his/her personal information and accept the Terms and Conditions of use. After that a confirmation e-mail is sent to the specified e-mail.
+\paragraph{Functional Requirements}
+\begin{enumerate}[label=R.\arabic*:]
+	\item The system must not accept an already registered e-mail.
+	\item The user must provide the following information:
+	\begin{itemize}
+		\item name
+		\item surname
+		\item e-mail
+		\item password
+	\end{itemize}
+	\item The system cannot allow the user to proceed in the registration process if he/she does not accept the Terms and Conditions of use.
+	\item The system must send an e-mail to the user after he/she submits the form.	
+	\item The system must generate a unique link for the registration e-mail.
+	\item The user must be able to exit the form any time.
+\end{enumerate}
+
+\paragraph*{Use Case\\}
+The use case of \emph{Registration} is analysed in Table \ref{tab:registration}.
+
+\begin{tabular}{p{0.25\linewidth}|p{0.75\linewidth}}
+	\hline
+	\textbf{Name} & \textbf{Registration} \\
+	\hline
+	\textbf{Actors} & Non registered user \\
+	\hline
+	\textbf{Entry conditions} & \_ \\
+	\hline
+	\textbf{Flow of events} & 
+	\begin{enumerate}
+		\item The user asks to the system to register to its service.
+		\item The system shows the appropriate form to fill.
+		\item The user fills the form inserting its own information.
+		\item The user submits the form.
+		\item The system checks if the e-mail is unique.
+		\item The system sends to the specified e-mail address a confirmation e-mail with a unique link.
+		\item The user must open the e-mail and click on the confirmation link.
+		\item The system receives the confirmation, saves the data inside a database and notifies to the user.
+	\end{enumerate}\\
+	\hline
+	\textbf{Exit conditions} & The user is now registered and he/she can login and start to use the service.\\
+	\hline
+	\textbf{Exceptions} & Exceptions can occur when requirements R.1, R.2 and R.3 are violated, in this case the system reloads the registration form and goes back to step 2. 
+	Registration process is also aborted when the user decides to complete it. \\
+	\hline
+	\caption{\emph{Registration} use case description}
+	\label{tab:registration}
+\end{tabular}
+
+\paragraph*{Activity Diagram\\}
+The activity diagram of \emph{Registration} use case in showed in Figure \ref{fig:registrationac}
+
+\begin{figure}[h]
+	\includegraphics[width=\textwidth,height=\textheight]{Img/RegistrationAC}
+	\caption{\emph{Registration} activity diagram}
+	\label{fig:registrationac}
+\end{figure}
+
+\begin{figure}
+	\includegraphics[width=\textheight,height=\textwidth,angle=90]{Img/RegistrationSQ}
+	\caption{\emph{Registration} sequence diagram}
+	\label{fig:registrationsq}
+\end{figure}
+
+
 %Add Use cases----------------------------------------------------
+\clearpage
 \subsection{Performance Requirements}
 Without taking into consideration the speed of the internet connection, in order to guarantee an acceptable user experience the following  requirements must be satisfied:
 \begin{itemize}
@@ -79,5 +151,6 @@ The user oversees his/her own security while travelling and must grant access to
 \subsubsection{Maintainability}
 The system must be developed in such a way that future implementation of new features and changes to existing ones can be done seamlessly, in other words the system has to be modular and scalable.
 \subsubsection{Portability}
+As already mentioned in \autoref{sec:SoftwareInterfaces} the software must be available on different configurations, it must be as environment independent as possible, meaning that it has to work on different platforms with the minimum amount of changes to the software itself.
 
 

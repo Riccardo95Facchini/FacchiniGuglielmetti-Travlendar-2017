@@ -40,13 +40,9 @@ In addition, the system must be able to use the API of other application in orde
 \clearpage
 
 \subsection{Functional Requirements}
-
 \subsubsection{Registration}
-
 \paragraph*{Purpose\\}
-
 The main purpose of the \emph{Registration} use case is to provide the user a service which permits the subscription to the system. The user must fill a registration form with his/her personal information and accept the Terms and Conditions of use. After that a confirmation e-mail is sent to the specified e-mail.
-
 \paragraph{Functional Requirements}
 \begin{enumerate}[label=R.\arabic*:]
 	\item The system must not accept an already registered e-mail.
@@ -64,10 +60,15 @@ The main purpose of the \emph{Registration} use case is to provide the user a se
 \end{enumerate}
 
 \paragraph*{Use Case\\}
-The use case of \emph{Registration} is analysed in Table \ref{tab:registration}.
-
-\begin{longtable}{p{0.25\linewidth}p{0.75\linewidth}}
+The \emph{Registration} use case is analysed in \autoref{tab:registration}
+\paragraph*{Activity Diagram\\}
+The activity diagram of the \emph{Registration} use case in showed in \autoref{fig:registrationac}
+\paragraph*{Sequence Diagram\\}
+The sequence diagram of the \emph{Registration} use case in showed in \autoref{fig:registrationsq}
+\newpage
+\begin{longtable}{p{0.25\linewidth}|p{0.75\linewidth}}
 	\hline
+		\label{tab:registration}
 	\textbf{Name} & \textbf{Registration} \\
 	\hline
 	\textbf{Actors} & Non registered user \\
@@ -92,11 +93,7 @@ The use case of \emph{Registration} is analysed in Table \ref{tab:registration}.
 	Registration process is also aborted when the user decides to complete it. \\
 	\hline
 	\caption{\emph{Registration} use case description}
-	\label{tab:registration}
 \end{longtable}
-
-\paragraph*{Activity Diagram\\}
-The activity diagram of \emph{Registration} use case in showed in Figure \ref{fig:registrationac}
 
 \begin{figure}[h]
 	\includegraphics[width=\textwidth,height=\textheight]{Img/RegistrationAC}
