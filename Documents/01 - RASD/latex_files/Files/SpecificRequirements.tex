@@ -60,7 +60,7 @@ The main purpose of the \emph{Registration} use case is to provide the user a se
 \end{enumerate}
 
 \paragraph*{Use Case\\}
-The \emph{Registration} use case is analysed in \autoref{tab:registration}
+The \emph{Registration} use case is analysed in \autoref{tab:registrationTAB}
 \paragraph*{Activity Diagram\\}
 The activity diagram of the \emph{Registration} use case in showed in \autoref{fig:registrationac}
 \paragraph*{Sequence Diagram\\}
@@ -68,10 +68,10 @@ The sequence diagram of the \emph{Registration} use case in showed in \autoref{f
 \newpage
 \begin{longtable}{p{0.25\linewidth}|p{0.75\linewidth}}
 	\hline
-		\label{tab:registration}
+		\label{tab:registrationTAB}
 	\textbf{Name} & \textbf{Registration} \\
 	\hline
-	\textbf{Actors} & Non registered user \\
+	\textbf{Actors} & Non registered User \\
 	\hline
 	\textbf{Entry conditions} & \_ \\
 	\hline
@@ -96,18 +96,290 @@ The sequence diagram of the \emph{Registration} use case in showed in \autoref{f
 \end{longtable}
 
 \begin{figure}[h]
-	\includegraphics[width=\textwidth,height=\textheight]{Img/RegistrationAC}
+	\includegraphics[width=\textwidth, height=\textheight, keepaspectratio=true]{Img/RegistrationAC}
 	\caption{\emph{Registration} activity diagram}
 	\label{fig:registrationac}
 \end{figure}
 
 \begin{figure}
-	\includegraphics[width=\textheight,height=\textwidth,angle=90]{Img/RegistrationSQ}
+	\includegraphics[width=\textheight, height=\textwidth, angle=90, keepaspectratio=true]{Img/RegistrationSQ}
 	\caption{\emph{Registration} sequence diagram}
 	\label{fig:registrationsq}
 \end{figure}
 
+\clearpage
+\subsubsection{Specify Means of Travel}
+\paragraph*{Purpose\\}
+The purpose of this functionality is to allow the user to select an order for his/her favourite means of travel and what vehicles he/she owns, the system will then take this data in consideration once it has to calculate a trip plan by giving precedence to the vehicles higher in the hierarchy.
+Both preferred and owned vehicles are optional information, if the user doesn't insert them the system will simply not be influenced when computing travels.
 
+\paragraph*{Functional Requirements}
+\begin{enumerate}[label=R.\arabic*:,resume]
+	\item The user must be logged in.
+	\item A vehicle already selected in an option must not appear again in the list when the user is selecting one.
+	\item The user must be able to change the inserted data at any time.
+	\item The system must take the preferences into account each time it computes a travel.
+\end{enumerate}
+
+\paragraph*{Scenario\\}
+Bill loves to move using his bicycle, and wishes to use it each time he can, so he decides to place it as his favourite vehicle by opening the Travlendar + app and after logging in he selects the "Options" icon, then he proceeds to open the "Select favourite vehicles" section and presses the “+” sign to add one, he then chooses "Bicycle" from the list he is presented with.\\
+Bill then remembers to also add the Bicycle to his owned vehicles, so the app won't suggest him to use a bike sharing company, to do that he selects the "Owned vehicles" option and just like before he presses the “+” sign and then picks "Bicycle" from the list to add it.
+
+\paragraph*{Use Case\\}
+The \emph{Specify Means of Travel} use case is analysed in \autoref{tab:SpecifyMeansofTravelTAB} and in \autoref{fig:SpecifyMeansofTravelUC}
+\paragraph*{Activity Diagram\\}
+The activity diagram of the \emph{Specify Means of Travel} use case in showed in \autoref{fig:SpecifyMeansofTravelAC}
+\paragraph*{Sequence Diagram\\}
+The sequence diagram of the \emph{Specify Means of Travel} use case in showed in \autoref{fig:SpecifyMeansofTravelSQ}
+\newpage
+\begin{longtable}{p{0.25\linewidth}|p{0.75\linewidth}}
+	\hline
+		\label{tab:SpecifyMeansofTravelTAB}
+	\textbf{Name} & \textbf{Specify Means of Travel} \\
+	\hline
+	\textbf{Actors} & User \\
+	\hline
+	\textbf{Entry conditions} & The user must be logged in\\
+	\hline
+	\textbf{Flow of events} & 
+	\begin{enumerate}
+		\item The user opens the app's options.
+		\item The user selects either the option to order the vehicles preferences or the one to add an owned one.
+		\item The user selects the “+” sign to add a vehicle.
+		\item The system provides a list of vehicles not already selected to the user.
+		\item The user chooses a vehicle from the list.
+		\item The system stores the choice in the database.
+	\end{enumerate}\\
+	\hline
+	\textbf{Exit conditions} & The user has selected one or more vehicles in his/her preference and/or in the owned section.\\
+	\hline
+	\textbf{Exceptions} & If the use already selected all possible vehicles the system won’t allow another insertion. \\
+	\hline
+	\caption{\emph{Specify Means of Travel} use case description}
+\end{longtable}
+
+\begin{figure}[h]
+	\includegraphics[width=\textwidth]{Img/SpecifyMeansofTravelUC}
+	\caption{\emph{Specify Means of Travel} use case}
+	\label{fig:SpecifyMeansofTravelUC}
+\end{figure}
+
+\begin{figure}[h]
+	\includegraphics[width=\textheight, height=\textwidth, angle=90, keepaspectratio=true]{Img/SpecifyMeansofTravelAC}
+	\caption{\emph{Specify Means of Travel} activity diagram}
+	\label{fig:SpecifyMeansofTravelAC}
+\end{figure}
+
+\begin{figure}
+	\includegraphics[width=\textheight, height=\textwidth, angle=90, keepaspectratio=true]{Img/SpecifyMeansofTravelSQ}
+	\caption{\emph{Specify Means of Travel} sequence diagram}
+	\label{fig:SpecifyMeansofTravelSQ}
+\end{figure}
+
+\clearpage
+\subsubsection{Change Appointment Information}
+\label{ChangeAppointmentInformation}
+\paragraph*{Purpose\\}
+This function allows the user to select an appointment already registered in the calendar and then change parameters ash he/she wishes, the system will then compute again the trip and store the changes made in the database.
+\paragraph*{Functional Requirements}
+\begin{enumerate}[label=R.\arabic*:,resume]
+	\item The user must be logged in.
+	\item The user must have at least one upcoming event saved.
+	\item The user must be able to change information as many times as he/she wishes.
+	\item Past events cannot be changed.
+\end{enumerate}
+
+\paragraph*{Scenario\\}
+Anna has taken an appointment with her doctor for next week at 3:00 pm and she already recorded it using Travlendar+, but she remembers that she has to bring her son to football practice before 3:15 pm, she decides then to call her doctor and re-schedules the appointment for 2:00 pm, once the call is finished she opens Travlendar+ and proceeds to open "Manage meetings", and then after selecting the appointment selects "Change meeting details", where she can change the time of the appointment and then saves it.
+\paragraph*{Use Case\\}
+The \emph{Change Appointment Information} use case is analysed in \autoref{tab:ChangeAppointmentInformationTAB} and in \autoref{fig:ChangeAppointmentInformationUC}
+\paragraph*{Activity Diagram\\}
+The activity diagram of the \emph{Change Appointment Information} use case in showed in \autoref{fig:ManageAppointmentsAC}
+\paragraph*{Sequence Diagram\\}
+The sequence diagram of the \emph{Change Appointment Information} use case in showed in \autoref{fig:ChangeAppointmentInformationSQ}
+\newpage
+\begin{longtable}{p{0.25\linewidth}|p{0.75\linewidth}}
+	\hline
+		\label{tab:ChangeAppointmentInformationTAB}
+	\textbf{Name} & \textbf{Change Appointment Information} \\
+	\hline
+	\textbf{Actors} & User \\
+	\hline
+	\textbf{Entry conditions} & The user must be logged in and must have at least one upcoming event.\\
+	\hline
+	\textbf{Flow of events} & 
+	\begin{enumerate}
+		\item The user opens the app.
+		\item The user selects the "Manage meetings" section.
+		\item The user selects the meeting he/she wants to change.
+		\item The user selects "Change meeting details".
+		\item The user changes the meeting as he/she wishes by providing at least one of the following:
+	\begin{enumerate}
+	\item Date of the meeting.
+	\item Time of the meeting.
+	\item Location of the meeting.
+	\item Name of the meeting.
+	\end{enumerate}
+		\item The user saves the changes.
+		\item The system updates the meeting in the database and computes again the trip.
+	\end{enumerate}\\
+	\hline
+	\textbf{Exit conditions} & The user changed a meeting.\\
+	\hline
+	\textbf{Exceptions} & If the meeting has expired and the user tries to change it, the application will avoid it. \\
+	\hline
+	\caption{\emph{Change Appointment Information} use case description}
+\end{longtable}
+
+\begin{figure}[h]
+	\includegraphics[width=\textwidth]{Img/ChangeAppointmentInformationUC}
+	\caption{\emph{Change Appointment Information} use case}
+	\label{fig:ChangeAppointmentInformationUC}
+\end{figure}
+
+\begin{figure}[h]
+\centering
+	\includegraphics[width=\textheight, height=\textwidth, keepaspectratio=true]{Img/ManageAppointmentsAC}
+	\caption{\emph{Change Appointment Information \& Delete Appointment} activity diagram}
+	\label{fig:ManageAppointmentsAC}
+\end{figure}
+
+\begin{sidewaysfigure}
+	\includegraphics[width=\textheight, height=\textwidth, keepaspectratio=true]{Img/ChangeAppointmentInformationSQ}
+	\caption{\emph{Change Appointment Information} sequence diagram}
+	\label{fig:ChangeAppointmentInformationSQ}
+\end{sidewaysfigure}
+
+\clearpage
+\subsubsection{Delete Appointment}
+\paragraph*{Purpose\\}
+\paragraph*{Functional Requirements}
+\begin{enumerate}[label=R.\arabic*:,resume]
+	\item The user must be logged in.
+	\item The user must have at least one upcoming event saved.
+	\item Once a meeting is deleted all data regarding it is lost.
+	\item Past events cannot be deleted.
+\end{enumerate}
+
+\paragraph*{Scenario\\}
+Emily decided with her friends to go out for dinner Saturday and inserted the place and time in a meeting using Travlendar+, but one of the other girls later proposed to have dinner at home, and since Emily has the biggest dining room she invited all the others to her place, since she doesn't need any more a travel planned she deletes the meeting previously created by selecting it in the "Manage meetings" section, she then proceeds to remove it by pressing the "Delete trip" button.
+\paragraph*{Use Case\\}
+The \emph{Delete Appointment} use case is analysed in \autoref{tab:DeleteAppointmentTAB} and in \autoref{fig:DeleteAppointmentUC}
+\paragraph*{Activity Diagram\\}
+The activity diagram of the \emph{Delete Appointment} use case in showed in \autoref{fig:ManageAppointmentsAC} alongside \emph{Change Appointment Information} from \autoref{ChangeAppointmentInformation}.
+\paragraph*{Sequence Diagram\\}
+The sequence diagram of the \emph{Delete Appointment} use case in showed in \autoref{fig:DeleteAppointmentSQ}
+\newpage
+\begin{longtable}{p{0.25\linewidth}|p{0.75\linewidth}}
+	\hline
+		\label{tab:DeleteAppointmentTAB}
+	\textbf{Name} & \textbf{Delete Appointment} \\
+	\hline
+	\textbf{Actors} & User \\
+	\hline
+	\textbf{Entry conditions} & The user must be logged in and must have at least one upcoming event.\\
+	\hline
+	\textbf{Flow of events} & 
+	\begin{enumerate}
+		\item The user opens the app.
+		\item The user selects the "Manage meetings" section.
+		\item The user selects the meeting he/she wants to delete.
+		\item The user presses the "Delete trip" button.
+		\item The system sends the delete request to the DBMS.
+		\item The DBMS deletes the entry selected by the user from the database.
+	\end{enumerate}\\
+	\hline
+	\textbf{Exit conditions} & A meeting was deleted.\\
+	\hline
+	\textbf{Exceptions} & If the meeting has expired and the user tries to delete it, the application will avoid it. \\
+	\hline
+	\caption{\emph{Delete Appointment} use case description}
+\end{longtable}
+
+\begin{figure}[h]
+	\includegraphics[width=\textwidth]{Img/DeleteAppointmentUC}
+	\caption{\emph{Delete Appointment} use case}
+	\label{fig:DeleteAppointmentUC}
+\end{figure}
+
+\begin{sidewaysfigure}
+	\includegraphics[width=\textheight, height=\textwidth, keepaspectratio=true]{Img/DeleteAppointmentSQ}
+	\caption{\emph{Delete Appointment} sequence diagram}
+	\label{fig:DeleteAppointmentSQ}
+\end{sidewaysfigure}
+
+\clearpage
+\subsubsection{Manage Breaks}
+\paragraph*{Purpose\\}
+The functionality delivered by \emph{Manage Breaks} refers to the possibility of scheduling a flexible time in which the system will reserve a given amount of minutes to any kind of break, with the option of changing or deleting said break in the future.\\
+\textbf{Note} that we will focus on the creating aspect, since treating also changing and deleting would offer no additional insight.
+\paragraph*{Functional Requirements}
+\begin{enumerate}[label=R.\arabic*:,resume]
+	\item The user must be logged in.
+	\item The user must insert the following parameters:
+	\begin{enumerate}
+	\item Starting time (From).
+	\item Duration of the break.
+	\item Days of the week.
+	\item End time (To).
+	\end{enumerate}
+\end{enumerate}
+\paragraph*{Scenario\\}
+Jimmy has a 3 hours window on Monday between school and soccer practice, from 12:30 am to 15:30 am in which he wants to have lunch and then study the remaining time.\\
+He decides to use Travlendar+ to schedule a flexible break, first he opens the app on his smartphone, then after going into "Manage account preferences" he adds a break of 30 minutes in the spare time he has by using the "Create break" option and filling the necessary fields.
+\paragraph*{Use Case\\}
+The \emph{Create Breaks} use case is analysed in \autoref{tab:CreateBreaksTAB}, in \autoref{fig:ManageBreaksUC} are also represented the "Delete break" and "Change break" functions.
+\paragraph*{Activity Diagram\\}
+The activity diagram of the \emph{Manage Breaks} use case in showed in \autoref{fig:ManageBreaksAC}
+\paragraph*{Sequence Diagram\\}
+The sequence diagram of the \emph{Create Breaks} use case in showed in \autoref{fig:CreateBreaksSQ}
+\newpage
+\begin{longtable}{p{0.25\linewidth}|p{0.75\linewidth}}
+	\hline
+		\label{tab:CreateBreaksTAB}
+	\textbf{Name} & \textbf{Create Breaks} \\
+	\hline
+	\textbf{Actors} & User \\
+	\hline
+	\textbf{Entry conditions} & The user must be logged in.\\
+	\hline
+	\textbf{Flow of events} & 
+	\begin{enumerate}
+		\item The user opens the app.
+		\item The user opens the options menu.
+		\item The user enters in "Manage account preferences".
+		\item The user selects "Create break".
+		\item The user fills the requested fields with the desired information.
+		\item The user saves the changes.
+		\item The system sends the data to the DBMS.
+		\item The DBMS stores the data about the break.
+	\end{enumerate}\\
+	\hline
+	\textbf{Exit conditions} & The user created a break\\
+	\hline
+	\textbf{Exceptions} & If the user doesn't choose a day of the week the system will act like if every day was selected. \\
+	\hline
+	\caption{\emph{Create Breaks} use case description}
+\end{longtable}
+
+\begin{figure}[h]
+	\includegraphics[width=\textwidth]{Img/ManageBreaksUC}
+	\caption{\emph{Create Breaks} use case}
+	\label{fig:ManageBreaksUC}
+\end{figure}
+
+\begin{figure}[h]
+\centering
+	\includegraphics[width=\textheight, height=\textwidth, keepaspectratio=true]{Img/ManageBreaksAC}
+	\caption{\emph{Manage Breaks} activity diagram}
+	\label{fig:ManageBreaksAC}
+\end{figure}
+
+\begin{sidewaysfigure}
+	\includegraphics[width=\textheight, height=\textwidth, keepaspectratio=true]{Img/CreateBreaksSQ}
+	\caption{\emph{Create Breaks} sequence diagram}
+	\label{fig:CreateBreaksSQ}
+\end{sidewaysfigure}
 %Add Use cases----------------------------------------------------
 \clearpage
 \subsection{Performance Requirements}
