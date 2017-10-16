@@ -45,15 +45,15 @@ In addition, the system must be able to use the API of other application in orde
 The main purpose of the \emph{Registration} use case is to provide the user a service which permits the subscription to the system. The user must fill a registration form with his/her personal information and accept the Terms and Conditions of use. After that a confirmation e-mail is sent to the specified e-mail.
 \paragraph{Functional Requirements}
 \begin{enumerate}[label=R.\arabic*:]
-	\item The system must not accept an already registered e-mail.
-	\item The user must provide the following information:
+	\item {\label{req:alreadyregistered}}The system must not accept an already registered e-mail.
+	\item {\label{req:userinformation}}The user must provide the following information:
 	\begin{itemize}
 		\item name
 		\item surname
 		\item e-mail
 		\item password
 	\end{itemize}
-	\item The system cannot allow the user to proceed in the registration process if he/she does not accept the Terms and Conditions of use.
+	\item {\label{req:conditionsaccepted}}The system cannot allow the user to proceed in the registration process if he/she does not accept the Terms and Conditions of use.
 	\item The system must send an e-mail to the user after he/she submits the form.	
 	\item The system must generate a unique link for the registration e-mail.
 	\item The user must be able to exit the form any time.
@@ -89,7 +89,7 @@ The sequence diagram of the \emph{Registration} use case in showed in \autoref{f
 	\hline
 	\textbf{Exit conditions} & The user is now registered and he/she can login and start to use the service.\\
 	\hline
-	\textbf{Exceptions} & Exceptions can occur when requirements R.1, R.2 and R.3 are violated, in this case the system reloads the registration form and goes back to step 2. 
+	\textbf{Exceptions} & Exceptions can occur when requirements~\ref{req:alreadyregistered},~\ref{req:userinformation},~\ref{req:conditionsaccepted} are violated, in this case the system reloads the registration form and goes back to step 2. 
 	Registration process is also aborted when the user decides to complete it. \\
 	\hline
 	\caption{\emph{Registration} use case description}
@@ -101,10 +101,69 @@ The sequence diagram of the \emph{Registration} use case in showed in \autoref{f
 	\label{fig:registrationac}
 \end{figure}
 
-\begin{figure}
-	\includegraphics[width=\textheight, height=\textwidth, angle=90, keepaspectratio=true]{Img/RegistrationSQ}
+\begin{sidewaysfigure}
+	\includegraphics[width=\textheight, height=\textwidth, keepaspectratio=true]{Img/RegistrationSQ}
 	\caption{\emph{Registration} sequence diagram}
 	\label{fig:registrationsq}
+\end{sidewaysfigure}
+
+\clearpage
+\subsubsection{Login}
+\paragraph*{Purpose\\}
+The purpose of \emph{Login} functionality is grant access to \emph{Travlendar+} to any registered user. The system requires an already inserted e-mail and corresponding password in order to access the service.
+
+\paragraph*{Functional Requirements}
+\begin{enumerate}[label=R.\arabic*:,resume]
+	\item The user must be already registered to the system to perform a successful login.
+	\item The system must require the user to insert his/her e-mail and password to perform a login.
+	\item The system must check if the password corresponds to a registered e-mail.
+	\item The system grants access to its service only to authenticated users.
+	\item The user can insert a new password if and only if he/she is a registered user and clicks on "\emph{Forgot my password}".
+	\item The password must correspond to the most recent one associated to the user's e-mail.
+\end{enumerate}
+
+\paragraph*{Use Case\\}
+The \emph{Login} use case is analysed in \autoref{tab:loginTAB}.
+\paragraph*{Activity Diagram\\}
+The activity diagram of the \emph{Login} use case in showed in \autoref{fig:loginac}.
+\paragraph*{Sequence Diagram\\}
+The sequence diagram of the \emph{Login} use case in showed in \autoref{fig:loginsq}.
+
+\begin{longtable}{p{0.25\linewidth}|p{0.75\linewidth}}
+	\hline
+	\label{tab:loginTAB}
+	\textbf{Name} & \textbf{Login} \\
+	\hline
+	\textbf{Actors} & Non registered User \\
+	\hline
+	\textbf{Entry conditions} & The user is already registered into the system and wants to login. \\
+	\hline
+	\textbf{Flow of events} & 
+	\begin{enumerate}
+		\item The user asks to the system to perform a login.
+		\item The system shows the \emph{Login} page.
+		\item The user inserts his/her e-mail and password and submits.
+		\item The system checks if the e-mail corresponds to a registered e-mail.
+		\item The system checks if the password is associated to the entered e-mail.
+	\end{enumerate}\\
+	\hline
+	\textbf{Exit conditions} & The user is now logged in.\\
+	\hline
+	\textbf{Exceptions} & Exceptions occurs when the e-mail has never been registered to the system or when the password does not corresponds to the e-mail.\\
+	\hline
+	\caption{\emph{Login} use case description}
+\end{longtable}
+
+\begin{figure}
+	\includegraphics[width=\textwidth, height=\textheight, keepaspectratio=true]{Img/LoginAC}
+	\caption{\emph{Login} activity diagram}
+	\label{fig:loginac}
+\end{figure}
+
+\begin{figure}
+	\includegraphics[width=\textwidth, height=\textheight, keepaspectratio=true]{Img/LoginSQ}
+	\caption{\emph{Login} sequence diagram}
+	\label{fig:loginsq}
 \end{figure}
 
 \clearpage
@@ -174,6 +233,91 @@ The sequence diagram of the \emph{Specify Means of Travel} use case in showed in
 	\includegraphics[width=\textheight, height=\textwidth, angle=90, keepaspectratio=true]{Img/SpecifyMeansofTravelSQ}
 	\caption{\emph{Specify Means of Travel} sequence diagram}
 	\label{fig:SpecifyMeansofTravelSQ}
+\end{figure}
+
+
+\clearpage
+\subsubsection{Create Appointment}
+\paragraph*{Purpose\\}
+This function allows the user to create and register an appointment in the calendar. The user inserts the appointment’s name, the time and location in which occurs and the time and location from where the system must calculate the path. The system then calculates the best path based on the user’s preferences, the weather of appointment day and possible strikes. If the appointment place is not reachable in time the system warns the user.
+
+\paragraph*{Functional Requirements}
+\begin{enumerate}[label=R.\arabic*:, resume]
+	\item The user must be logged in.
+	\item The user must be able to abort the operation any time.
+	\item {\label{req:appointmentinformation}}The user must insert:
+	\begin{itemize}
+		\item Appointment name.
+		\item Appointment time and location.
+		\item Starting time and location.		
+	\end{itemize}
+	\item The starting and destination locations must exists.
+	\item The appointment time must be after the starting time.
+	\item Both the appointment time and the starting time must not be in the past.
+	\item If the appointment is not reachable in time a warning must alert the user.
+	\item If the appointment duration overlaps with a previous created appointment, a warning must alert the user.
+	\item If between the starting time and the appointment time there are one or more appointments, a warning must alert the user.
+	\item The user must be able to adjust appointment information after a warning.
+	\item The user must be able to ignore the warning if and only if the appointment does not overlaps with others previous created appointments.
+	\item The system must calculate the best path every time the appointment information changes.
+\end{enumerate}
+
+\paragraph*{Scenario\\}
+
+\paragraph*{Use Case\\}
+The \emph{Create Appointment} use case is analysed in \autoref{tab:createappointment} and in \autoref{fig:createappointment}.
+
+\paragraph*{Activity Diagram\\}
+The \emph{Create Appointment} activity diagram is showed in \autoref{fig:createappointmentac}.
+
+\paragraph*{Sequence Diagram\\}
+The \emph{Create Appointment} sequence diagram is showed in \autoref{fig:createappointmentsq}.
+
+\begin{figure}[h]
+	\includegraphics[width=\textwidth, keepaspectratio=true]{Img/CreateAppointmentUC}
+	\caption{\emph{Create Appointment} use case}
+	\label{fig:createappointment}
+\end{figure}
+
+\newpage
+\begin{longtable}{p{0.25\linewidth}|p{0.75\linewidth}}
+	\hline
+	\label{tab:createappointment}
+	\textbf{Name} & \textbf{Create appointment} \\
+	\hline
+	\textbf{Actors} & User \\
+	\hline
+	\textbf{Entry conditions} & The user must be logged in\\
+	\hline
+	\textbf{Flow of events} & 
+	\begin{enumerate}
+		\item The user select "\emph{Create an appointment}.
+		\item The user fills the form inserting the data required by the requirement~\ref{req:appointmentinformation}.
+		\item The system calculates the best path.
+	\end{enumerate}\\
+	\hline
+	\textbf{Exit conditions} & The system saves the appointment informations.\\
+	\hline
+	\textbf{Exceptions} & Exceptions can occur when information about time and location of the appointment does not follows the requirements, in this case a warning is generated.
+	If the warning is about the non-reachability of the appointment in time the system asks to the user if he/she wants to modify appointment information or to ignore the warning.
+	Instead, if the created appointment overlaps with another appointment the system warns the user asking to modify appointment information.
+	If the created appointment does not overlaps with other appointments, but is not reachable in time the user can choose to ignore the warning and let the system to create the appointment.
+	If the user chooses to abort the operation the appointment will not be saved.
+	 \\
+	\hline
+	\caption{\emph{Create Appointment} use case description}
+\end{longtable}
+
+\begin{figure}
+	\includegraphics[width=\textwidth, height=\textheight, keepaspectratio=true]{Img/CreateAppointmentAC}
+	\caption{\emph{Create Appointment} activity diagram}
+	\label{fig:createappointmentac}
+\end{figure}
+
+\begin{figure}
+	\includegraphics[width=\textwidth, height=\textheight, keepaspectratio=true]{Img/CreateAppointmentSQ}
+	\caption{\emph{Create Appointment} sequence diagram}
+	\label{fig:createappointmentsq}
 \end{figure}
 
 \clearpage
@@ -253,6 +397,7 @@ The sequence diagram of the \emph{Change Appointment Information} use case in sh
 \clearpage
 \subsubsection{Delete Appointment}
 \paragraph*{Purpose\\}
+This function allows the user to select an appointment already registered in the calendar and removing it, the system will then notify the DBMS to remove it from the database.
 \paragraph*{Functional Requirements}
 \begin{enumerate}[label=R.\arabic*:,resume]
 	\item The user must be logged in.
@@ -380,6 +525,117 @@ The sequence diagram of the \emph{Create Breaks} use case in showed in \autoref{
 	\caption{\emph{Create Breaks} sequence diagram}
 	\label{fig:CreateBreaksSQ}
 \end{sidewaysfigure}
+
+\clearpage
+\subsubsection{Manage Account}
+
+\paragraph*{Purpose}
+The main purpose of this use case is to grant the user the possibility to view his/her personal information, update it or to delete the account.
+
+\paragraph*{Functional Requirements}
+\begin{enumerate}[label=R.\arabic*:, resume]
+	\item The user must be logged in.
+	\item The system must shows all the information inserted during the registration process, except the password.
+	\item {\label{req:startmanage}} The system allows the user to update every information except the e-mail used to login.
+	\item The user must insert the old password and twice the new password in order to update his/her password.
+	\item The system allows to change the password if and only if the old one has been inserted correctly.
+	\item {\label{req:endmanage}}The system does not allow the user to update the password if the new one has not been inserted twice.
+	\item The system makes every changes permanent as soon as the user confirms the operation.
+	\item The user can delete his/her account if and only if he/she inserts the current password.
+	\item The system removes from the database the user's personal information if and only if the user deletes his/her account.
+\end{enumerate}
+
+\paragraph*{Scenario}
+
+\paragraph*{Use Case}
+The use case is analysed in \autoref{fig:manageaccountuc} and in \autoref{tab:viewaccountusecase}, \autoref{tab:modifypersonalinformation} and in \autoref{tab:deleteaccount}.
+
+\begin{figure}[h]
+	\includegraphics[width=\textwidth, height=\textheight, keepaspectratio=true]{Img/ManageAccountUC}
+	\caption{\emph{Manage Account} overall use case}
+	\label{fig:manageaccountuc}
+\end{figure}
+
+\newpage
+\begin{longtable}{p{0.25\linewidth}|p{0.75\linewidth}}
+	\hline
+	\label{tab:viewaccountusecase}
+	\textbf{Name} & \textbf{View account information} \\
+	\hline
+	\textbf{Actors} & User \\
+	\hline
+	\textbf{Entry conditions} & The user must be logged in.\\
+	\hline
+	\textbf{Flow of events} & 
+	\begin{enumerate}
+		\item The user opens the app.
+		\item The user opens the options menu.
+		\item The user enters in "Show personal information".
+		\item The system shows the user's personal information.
+	\end{enumerate}\\
+	\hline
+	\textbf{Exit conditions} & The system lets the user checks his/her information.\\
+	\hline
+	\textbf{Exceptions} & \- \\
+	\hline
+	\caption{\emph{View Account Information} use case description}
+\end{longtable}
+
+\begin{longtable}{p{0.25\linewidth}|p{0.75\linewidth}}
+	\hline
+	\label{tab:modifypersonalinformation}
+	\textbf{Name} & \textbf{Modify personal information} \\
+	\hline
+	\textbf{Actors} & User \\
+	\hline
+	\textbf{Entry conditions} & The user must be logged in.\\
+	\hline
+	\textbf{Flow of events} & 
+	\begin{enumerate}
+		\item The user opens the app.
+		\item The user opens the options menu.
+		\item The user enters in "\emph{Show personal information}".
+		\item The user selects "\emph{Modify my information}".
+		\item The user enters the updated information.
+		\item The user confirms the changes.
+	\end{enumerate}\\
+	\hline
+	\textbf{Exit conditions} & The system saves the information.\\
+	\hline
+	\textbf{Exceptions} & If one of the requirements from \ref{req:startmanage} to \ref{req:endmanage} is not satisfied the system ignores the changes and reload the "\emph{Modify my information}" page. \\
+	\hline
+	\caption{\emph{Modify personal information} use case description}
+\end{longtable}
+
+\newpage
+\begin{longtable}{p{0.25\linewidth}|p{0.75\linewidth}}
+	\hline
+	\label{tab:deleteaccount}
+	\textbf{Name} & \textbf{Delete account} \\
+	\hline
+	\textbf{Actors} & User \\
+	\hline
+	\textbf{Entry conditions} & The user must be logged in.\\
+	\hline
+	\textbf{Flow of events} & 
+	\begin{enumerate}
+		\item The user opens the app.
+		\item The user opens the options menu.
+		\item The user enters in "\emph{Show personal information}".
+		\item The user selects "\emph{Modify my information}".
+		\item The user selects "\emph{Delete my account}".
+		\item The user inserts his/her password.
+		\item The user confirms the operation.
+	\end{enumerate}\\
+	\hline
+	\textbf{Exit conditions} & The system deletes the user's account and the user is not registered anymore.\\
+	\hline
+	\textbf{Exceptions} & If the user enters the wrong password the system prevents the account cancellation. \\
+	\hline
+	\caption{\emph{Delete account} use case description}
+\end{longtable}
+
+
 %Add Use cases----------------------------------------------------
 \clearpage
 \subsection{Performance Requirements}

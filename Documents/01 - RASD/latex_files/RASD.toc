@@ -26,17 +26,20 @@
 \contentsline {subsection}{\numberline {3.2}Functional Requirements}{12}{subsection.3.2}
 \contentsline {subsubsection}{\numberline {3.2.1}Registration}{12}{subsubsection.3.2.1}
 \contentsline {paragraph}{Functional Requirements}{12}{section*.9}
-\contentsline {subsubsection}{\numberline {3.2.2}Specify Means of Travel}{16}{subsubsection.3.2.2}
-\contentsline {subsubsection}{\numberline {3.2.3}Change Appointment Information}{20}{subsubsection.3.2.3}
-\contentsline {subsubsection}{\numberline {3.2.4}Delete Appointment}{24}{subsubsection.3.2.4}
-\contentsline {subsubsection}{\numberline {3.2.5}Manage Breaks}{27}{subsubsection.3.2.5}
-\contentsline {subsection}{\numberline {3.3}Performance Requirements}{31}{subsection.3.3}
-\contentsline {subsection}{\numberline {3.4}Design Constraints}{32}{subsection.3.4}
-\contentsline {subsubsection}{\numberline {3.4.1}Standards Compliance}{32}{subsubsection.3.4.1}
-\contentsline {subsubsection}{\numberline {3.4.2}Hardware Limitations}{32}{subsubsection.3.4.2}
-\contentsline {subsection}{\numberline {3.5}Software System Attributes}{33}{subsection.3.5}
-\contentsline {subsubsection}{\numberline {3.5.1}Reliability}{33}{subsubsection.3.5.1}
-\contentsline {subsubsection}{\numberline {3.5.2}Availability}{33}{subsubsection.3.5.2}
-\contentsline {subsubsection}{\numberline {3.5.3}Safety and Privacy Constraints}{33}{subsubsection.3.5.3}
-\contentsline {subsubsection}{\numberline {3.5.4}Maintainability}{33}{subsubsection.3.5.4}
-\contentsline {subsubsection}{\numberline {3.5.5}Portability}{33}{subsubsection.3.5.5}
+\contentsline {subsubsection}{\numberline {3.2.2}Login}{16}{subsubsection.3.2.2}
+\contentsline {subsubsection}{\numberline {3.2.3}Specify Means of Travel}{19}{subsubsection.3.2.3}
+\contentsline {subsubsection}{\numberline {3.2.4}Create Appointment}{23}{subsubsection.3.2.4}
+\contentsline {subsubsection}{\numberline {3.2.5}Change Appointment Information}{27}{subsubsection.3.2.5}
+\contentsline {subsubsection}{\numberline {3.2.6}Delete Appointment}{31}{subsubsection.3.2.6}
+\contentsline {subsubsection}{\numberline {3.2.7}Manage Breaks}{34}{subsubsection.3.2.7}
+\contentsline {subsubsection}{\numberline {3.2.8}Manage Account}{38}{subsubsection.3.2.8}
+\contentsline {subsection}{\numberline {3.3}Performance Requirements}{41}{subsection.3.3}
+\contentsline {subsection}{\numberline {3.4}Design Constraints}{42}{subsection.3.4}
+\contentsline {subsubsection}{\numberline {3.4.1}Standards Compliance}{42}{subsubsection.3.4.1}
+\contentsline {subsubsection}{\numberline {3.4.2}Hardware Limitations}{42}{subsubsection.3.4.2}
+\contentsline {subsection}{\numberline {3.5}Software System Attributes}{43}{subsection.3.5}
+\contentsline {subsubsection}{\numberline {3.5.1}Reliability}{43}{subsubsection.3.5.1}
+\contentsline {subsubsection}{\numberline {3.5.2}Availability}{43}{subsubsection.3.5.2}
+\contentsline {subsubsection}{\numberline {3.5.3}Safety and Privacy Constraints}{43}{subsubsection.3.5.3}
+\contentsline {subsubsection}{\numberline {3.5.4}Maintainability}{43}{subsubsection.3.5.4}
+\contentsline {subsubsection}{\numberline {3.5.5}Portability}{43}{subsubsection.3.5.5}
