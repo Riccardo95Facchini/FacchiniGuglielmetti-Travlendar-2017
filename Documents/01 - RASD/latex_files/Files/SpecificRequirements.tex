@@ -59,6 +59,12 @@ The main purpose of the \emph{Registration} use case is to provide the user a se
 	\item The user must be able to exit the form any time.
 \end{enumerate}
 
+\paragraph*{Scenario\\}
+Alice is searching an app to track down her appointments. Searching on the Play Store app of her phone,
+she finds out an app called Travlendar+.
+She downloads it, compiles the registration form, clicks on the link inside the confirmation app and the she
+is ready to use Travlendar+.
+
 \paragraph*{Use Case\\}
 The \emph{Registration} use case is analysed in \autoref{tab:registrationTAB}
 \paragraph*{Activity Diagram\\}
@@ -121,6 +127,12 @@ The purpose of \emph{Login} functionality is grant access to \emph{Travlendar+} 
 	\item The user can insert a new password if and only if he/she is a registered user and clicks on "\emph{Forgot my password}".
 	\item The password must correspond to the most recent one associated to the user's e-mail.
 \end{enumerate}
+
+\paragraph*{Scenario\\}
+Bob wants to login on Travlendar+. He opens the Travlendar+’s web site, then clicks on Login and
+eventually inserts his e-mail and password, but the system does not accept his data and prevents the login.
+Bob checks the e-mail inserted and finds a typo, he corrects it and submits again the data. Now all the
+information required are correct and the system accept the login.
 
 \paragraph*{Use Case\\}
 The \emph{Login} use case is analysed in \autoref{tab:loginTAB}.
@@ -263,6 +275,7 @@ This function allows the user to create and register an appointment in the calen
 \end{enumerate}
 
 \paragraph*{Scenario\\}
+Jessica has taken an appointment with her dentist on 27th October at 8:00 am. She opens her \emph{Travlendar+} app, selects "\emph{Create an appointment}" and inserts the name of the event, the time and the address of the dentist’s studio. She also inserts from where and when the app must calculate the path, she sets the starting time at 7:30 am and, since she is at home, the starting location via GPS.
 
 \paragraph*{Use Case\\}
 The \emph{Create Appointment} use case is analysed in \autoref{tab:createappointment} and in \autoref{fig:createappointment}.
@@ -545,7 +558,11 @@ The main purpose of this use case is to grant the user the possibility to view h
 	\item The system removes from the database the user's personal information if and only if the user deletes his/her account.
 \end{enumerate}
 
-\paragraph*{Scenario}
+\paragraph*{Scenario\\}
+
+\textbf{Scenario 1}\\ Carlo wants to change his password because it does not seem quite strong for him. He opens his \emph{Travlendar+} app, selects "\emph{Show my information}", "\emph{Modify my information}" and then "\emph{Modify password}". He enters his old password and the new password twice. The old password is written correctly, so the system accepts the new password.\\
+\textbf{Scenario 2}\\ Bob does not use very often \emph{Travlendar+}, so he decides to uninstall the app, but first he wants to delete his account. He opens the app, select "\emph{Show my information}", "\emph{Modify my information}" and then "\emph{Delete my account}" and, in order to confirm his choice, inserts his password. The system deletes all the Bob’s personal information from the database. Now Bob must register again to use \emph{Travlendar+} services.
+
 
 \paragraph*{Use Case}
 The use case is analysed in \autoref{fig:manageaccountuc} and in \autoref{tab:viewaccountusecase}, \autoref{tab:modifypersonalinformation} and in \autoref{tab:deleteaccount}.
@@ -570,7 +587,7 @@ The use case is analysed in \autoref{fig:manageaccountuc} and in \autoref{tab:vi
 	\begin{enumerate}
 		\item The user opens the app.
 		\item The user opens the options menu.
-		\item The user enters in "Show personal information".
+		\item The user enters in "\emph{Show personal information}".
 		\item The system shows the user's personal information.
 	\end{enumerate}\\
 	\hline
@@ -581,6 +598,7 @@ The use case is analysed in \autoref{fig:manageaccountuc} and in \autoref{tab:vi
 	\caption{\emph{View Account Information} use case description}
 \end{longtable}
 
+\newpage
 \begin{longtable}{p{0.25\linewidth}|p{0.75\linewidth}}
 	\hline
 	\label{tab:modifypersonalinformation}
