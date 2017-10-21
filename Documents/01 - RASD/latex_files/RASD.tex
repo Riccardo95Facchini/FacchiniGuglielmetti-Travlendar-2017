@@ -1,4 +1,11 @@
 \input{commandsFile}
+%Packages for Alloy code listing
+\usepackage{listings}
+\usepackage{alloy}
+\usepackage{color}
+\definecolor{alloy-keyword}{rgb}{0.23, 0.23, 0.7}
+\definecolor{alloy-comment}{rgb}{0.18, 0.64, 0.18}
+\definecolor{alloy-string}{rgb}{0.71, 0.18, 0.71}
 
 \begin{document}
 %Custom title page
@@ -23,7 +30,7 @@
 \textbf{Deliverable:} & RASD\\
 \textbf{Title:} & Requirement Analysis and Verification Document \\
 \textbf{Authors:} & Riccardo Facchini - Andrea Guglielmetti \\
-\textbf{Version:} & 0.8 \\ 
+\textbf{Version:} & 1.0 \\ 
 \textbf{Date:} & \today \\
 \textbf{Download page:} & \url{https://github.com/Riccardo95Facchini/FacchiniGuglielmetti.git} \\
 \textbf{Copyright:} & Copyright © 2017, Riccardo Facchini - Andrea Guglielmetti – All rights reserved \\
@@ -56,5 +63,14 @@
 {\color{Blue}{\section{Specific Requirements}}}
 \label{sect:Specific Requirements}
 \input{Files/SpecificRequirements}
-
+%Alloy-------------------------------------------------------------------
+\clearpage
+{\color{Blue}{\section{Alloy}}}
+\label{sect:Alloy}
+\input{Files/Alloy}
+%Appendix-------------------------------------------------------------------
+\clearpage
+{\color{Blue}{\section{Appendix}}}
+\label{sect:Appendix}
+\input{Files/Appendix}
 \end{document}

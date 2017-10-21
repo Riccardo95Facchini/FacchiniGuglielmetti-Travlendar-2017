@@ -38,14 +38,14 @@ What follows is the list of all the main terms and abbreviations used in the doc
 \item \textbf{API}: Application Programming Interface
 \item \textbf{RAM}: Random Access Memory
 \item \textbf{UMTS}: Universal Mobile Telecommunications System
+\item \textbf{DB}: Database
+\item \textbf{DBMS}: Database Management System
 \end{itemize}
 \subsubsection{Abbreviations}
 No other abbreviations aside from acronyms were used.
 \subsubsection{Revision History}
 \begin{itemize}
-\item 07/10/2017 Introduction.
-\item 09/10/2017 Product perspective and Specific requirements.
-\item 11/10/2017 Minor fixes to the structure, added subsections 3.5 and expanded Product Perspective.
+\item
 \end{itemize}
 \subsection{Reference documents}
 \begin{itemize}
