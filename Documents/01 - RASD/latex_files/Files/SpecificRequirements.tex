@@ -8,7 +8,7 @@ In both cases the user interfaces must satisfy the following constrains:
 	\item (Web) A toolbar must be present in every page, except login and registration page.
 	\item (Mobile) A toolbar must be present in the homepage.
 	\item The \emph{Create a meeting} page must provide a guided process to set-up a meeting and clearly show if the created meeting is not reachable in time from the location of a previous appointment.
-	\item The \emph{Manage meetings} page must show a list of user's meetings divided by day and hour, and allows the user to select a meeting to obtain further information.
+	\item The \emph{Manage meetings} page must show a list of the user's meetings and allow the user to select a meeting to obtain further information.
 	\item The interface must offer the possibility to choose between a set of different languages.
 	\item The user interface must dynamically adapt to the screen size.
 	\item The Mobile and Web application must use the same graphical elements.
@@ -21,8 +21,8 @@ In addition to these constraints, other platform-dependent constraints are provi
 		All mobile versions must follow the design guidelines provided by the respective platform manufacturer (Android, iOS, Windows \dots).
 \end{itemize}
 \subsubsection{Hardware Interfaces}
-The web application needs any personal computer connected to the internet, while the mobile application must be able to connect to the network in order to exchange information with the server, such as destination and location of the user retrieved via the GPS of the mobile device.\\
-Hardware requirements for both are later specified in \autoref{sec:HardwareLimitations}
+For the use of the web application is needed a personal computer connected to the internet and equipped with a web browser capable of rendering, while the mobile application must be able to connect to the network in order to exchange information with the server, such as destination and location of the user retrieved via the GPS of the mobile device.\\
+Hardware requirements for both applications are later specified in \autoref{sec:HardwareLimitations}
 \clearpage
 \subsubsection{Software Interfaces}
 \label{sec:SoftwareInterfaces}
@@ -35,10 +35,8 @@ The server side of the application requires:
 The client side of the application requires the latest version of the platform SDK.
 \subsubsection{Communication Interfaces}
 The client communicates to the server via HTTPS protocol using TCP.\\
-In addition, the system must be able to use the API of other application in order to retrieves weather and news about road conditions or strike.
-
+In addition, the system must be able to use the API of other application in order to retrieve weather forecasts and news about strikes.
 \clearpage
-
 \subsection{Functional Requirements}
 \subsubsection{Registration}
 \paragraph*{Purpose\\}
@@ -96,7 +94,7 @@ The sequence diagram of the \emph{Registration} use case in showed in \autoref{f
 	\textbf{Exit conditions} & The user is now registered and he/she can login and start to use the service.\\
 	\hline
 	\textbf{Exceptions} & Exceptions can occur when requirements~\ref{req:alreadyregistered},~\ref{req:userinformation},~\ref{req:conditionsaccepted} are violated, in this case the system reloads the registration form and goes back to step 2. 
-	Registration process is also aborted when the user decides to complete it. \\
+	Registration process is also aborted when the user decides to exit from it. \\
 	\hline
 	\caption{\emph{Registration} use case description}
 \end{longtable}
@@ -311,10 +309,10 @@ The \emph{Create Appointment} sequence diagram is showed in \autoref{fig:createa
 	\hline
 	\textbf{Exit conditions} & The system saves the appointment informations.\\
 	\hline
-	\textbf{Exceptions} & Exceptions can occur when information about time and location of the appointment does not follows the requirements, in this case a warning is generated.
+	\textbf{Exceptions} & Exceptions can occur when information about time and location of the appointment does not follow the requirements, in this case a warning is generated.
 	If the warning is about the non-reachability of the appointment in time the system asks to the user if he/she wants to modify appointment information or to ignore the warning.
-	Instead, if the created appointment overlaps with another appointment the system warns the user asking to modify appointment information.
-	If the created appointment does not overlaps with other appointments, but is not reachable in time the user can choose to ignore the warning and let the system to create the appointment.
+	Instead, if the created appointment overlaps with another appointment the system warns the user asking to modify the appointment information.
+	If the created appointment does not overlap with other appointments, but is not reachable in time the user can choose to ignore the warning and let the system to create the appointment.
 	If the user chooses to abort the operation the appointment will not be saved.
 	 \\
 	\hline
@@ -337,7 +335,7 @@ The \emph{Create Appointment} sequence diagram is showed in \autoref{fig:createa
 \subsubsection{Change Appointment Information}
 \label{ChangeAppointmentInformation}
 \paragraph*{Purpose\\}
-This function allows the user to select an appointment already registered in the calendar and then change parameters ash he/she wishes, the system will then compute again the trip and store the changes made in the database.
+This function allows the user to select an appointment already registered in the calendar and then change parameters as he/she wishes, the system will then compute again the trip and store the changes made in the database.
 \paragraph*{Functional Requirements}
 \begin{enumerate}[label=R.\arabic*:,resume]
 	\item The user must be logged in.
@@ -541,16 +539,15 @@ The sequence diagram of the \emph{Create Breaks} use case in showed in \autoref{
 
 \clearpage
 \subsubsection{Manage Account}
-
-\paragraph*{Purpose}
-The main purpose of this use case is to grant the user the possibility to view his/her personal information, update it or to delete the account.
+\paragraph*{Purpose\\}
+The main purpose of this use case is to grant the user the possibility to view and update his/her personal information and even delete the account.
 
 \paragraph*{Functional Requirements}
 \begin{enumerate}[label=R.\arabic*:, resume]
 	\item The user must be logged in.
 	\item The system must shows all the information inserted during the registration process, except the password.
 	\item {\label{req:startmanage}} The system allows the user to update every information except the e-mail used to login.
-	\item The user must insert the old password and twice the new password in order to update his/her password.
+	\item The user must insert the old password once and the new one twice in order to update his/her password.
 	\item The system allows to change the password if and only if the old one has been inserted correctly.
 	\item {\label{req:endmanage}}The system does not allow the user to update the password if the new one has not been inserted twice.
 	\item The system makes every changes permanent as soon as the user confirms the operation.
@@ -558,13 +555,13 @@ The main purpose of this use case is to grant the user the possibility to view h
 	\item The system removes from the database the user's personal information if and only if the user deletes his/her account.
 \end{enumerate}
 
-\paragraph*{Scenario\\}
+\paragraph*{Scenario 1\\}
+Carlo wants to change his password because it does not seem quite strong for him. He opens his \emph{Travlendar+} app, selects "\emph{Show my information}", "\emph{Modify my information}" and then "\emph{Modify password}". He enters his old password and the new password twice. The old password is written correctly, so the system accepts the new password.\\
+\paragraph*{Scenario 2\\} 
+Bob does not use very often \emph{Travlendar+}, so he decides to uninstall the app, but first he wants to delete his account. He opens the app, select "\emph{Show my information}", "\emph{Modify my information}" and then "\emph{Delete my account}" and, in order to confirm his choice, inserts his password, the system then deletes all  Bob’s personal information from the database. Now Bob must register again if he wants to start using \emph{Travlendar+}'s services once more.
 
-\textbf{Scenario 1}\\ Carlo wants to change his password because it does not seem quite strong for him. He opens his \emph{Travlendar+} app, selects "\emph{Show my information}", "\emph{Modify my information}" and then "\emph{Modify password}". He enters his old password and the new password twice. The old password is written correctly, so the system accepts the new password.\\
-\textbf{Scenario 2}\\ Bob does not use very often \emph{Travlendar+}, so he decides to uninstall the app, but first he wants to delete his account. He opens the app, select "\emph{Show my information}", "\emph{Modify my information}" and then "\emph{Delete my account}" and, in order to confirm his choice, inserts his password. The system deletes all the Bob’s personal information from the database. Now Bob must register again to use \emph{Travlendar+} services.
 
-
-\paragraph*{Use Case}
+\paragraph*{Use Case\\}
 The use case is analysed in \autoref{fig:manageaccountuc} and in \autoref{tab:viewaccountusecase}, \autoref{tab:modifypersonalinformation} and in \autoref{tab:deleteaccount}.
 
 \begin{figure}[h]
@@ -653,11 +650,9 @@ The use case is analysed in \autoref{fig:manageaccountuc} and in \autoref{tab:vi
 	\caption{\emph{Delete account} use case description}
 \end{longtable}
 
-
-%Add Use cases----------------------------------------------------
 \clearpage
 \subsection{Performance Requirements}
-Without taking into consideration the speed of the internet connection, in order to guarantee an acceptable user experience the following  requirements must be satisfied:
+Without taking into consideration the speed of the internet connection, in order to guarantee an acceptable user experience the following requirements must be satisfied:
 \begin{itemize}
 \item Navigation between pages of the system must happen in 0.5s or less.
 \item The  best travel plan must be computed in 5s or less.
@@ -665,7 +660,6 @@ Without taking into consideration the speed of the internet connection, in order
 \item No limit of schedulable appointments.
 \item At least 1000 users must be able to use the service at the same time. 
 \end{itemize}
-\newpage
 \subsection{Design Constraints}
 \subsubsection{Standards Compliance}
 The web application must comply with the standards dictated by W3C, while the mobile application must follow the Oracle guidelines for Java programming.
@@ -692,12 +686,10 @@ The system should also be able to process operations in parallel.
 \subsubsection{Reliability}
 Each trip plan computed given the preferences expressed by the user and the weather forecast and strikes must not differ more than 5\% from the optimal travel distance or ETA.
 \subsubsection{Availability}
-The system to be must guarantee an availability of no less than 98\%.
+The system to be must guarantee an availability of no less than 99\%.
 \subsubsection{Safety and Privacy Constraints}
-The user oversees his/her own security while travelling and must grant access to the current location, information about former trips and personal data are stored but only the user itself has access to them.
+The user oversees his/her own security while travelling and must grant access to the current location, information about former trips and personal data are stored but only the user itself has access to them, the password itself is not saved in the database, instead the result of an encryption algorithm on the password is stored to compare it to the result of the same operation once the user inserts it.
 \subsubsection{Maintainability}
 The system must be developed in such a way that future implementation of new features and changes to existing ones can be done seamlessly, in other words the system has to be modular and scalable.
 \subsubsection{Portability}
 As already mentioned in \autoref{sec:SoftwareInterfaces} the software must be available on different configurations, it must be as environment independent as possible, meaning that it has to work on different platforms with the minimum amount of changes to the software itself.
-
-

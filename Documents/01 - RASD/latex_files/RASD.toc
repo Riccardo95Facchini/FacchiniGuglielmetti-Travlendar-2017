@@ -34,17 +34,17 @@
 \contentsline {subsubsection}{\numberline {3.2.7}Manage Breaks}{34}{subsubsection.3.2.7}
 \contentsline {subsubsection}{\numberline {3.2.8}Manage Account}{38}{subsubsection.3.2.8}
 \contentsline {subsection}{\numberline {3.3}Performance Requirements}{42}{subsection.3.3}
-\contentsline {subsection}{\numberline {3.4}Design Constraints}{43}{subsection.3.4}
-\contentsline {subsubsection}{\numberline {3.4.1}Standards Compliance}{43}{subsubsection.3.4.1}
-\contentsline {subsubsection}{\numberline {3.4.2}Hardware Limitations}{43}{subsubsection.3.4.2}
-\contentsline {subsection}{\numberline {3.5}Software System Attributes}{44}{subsection.3.5}
-\contentsline {subsubsection}{\numberline {3.5.1}Reliability}{44}{subsubsection.3.5.1}
-\contentsline {subsubsection}{\numberline {3.5.2}Availability}{44}{subsubsection.3.5.2}
-\contentsline {subsubsection}{\numberline {3.5.3}Safety and Privacy Constraints}{44}{subsubsection.3.5.3}
-\contentsline {subsubsection}{\numberline {3.5.4}Maintainability}{44}{subsubsection.3.5.4}
-\contentsline {subsubsection}{\numberline {3.5.5}Portability}{44}{subsubsection.3.5.5}
-\contentsline {section}{\numberline {4}Alloy}{45}{section.4}
-\contentsline {subsection}{\numberline {4.1}Alloy Execution Result}{51}{subsection.4.1}
-\contentsline {section}{\numberline {5}Appendix}{53}{section.5}
-\contentsline {section}{\numberline {6}Software Used}{53}{section.6}
-\contentsline {section}{\numberline {7}Hours of Work}{53}{section.7}
+\contentsline {subsection}{\numberline {3.4}Design Constraints}{42}{subsection.3.4}
+\contentsline {subsubsection}{\numberline {3.4.1}Standards Compliance}{42}{subsubsection.3.4.1}
+\contentsline {subsubsection}{\numberline {3.4.2}Hardware Limitations}{42}{subsubsection.3.4.2}
+\contentsline {subsection}{\numberline {3.5}Software System Attributes}{43}{subsection.3.5}
+\contentsline {subsubsection}{\numberline {3.5.1}Reliability}{43}{subsubsection.3.5.1}
+\contentsline {subsubsection}{\numberline {3.5.2}Availability}{43}{subsubsection.3.5.2}
+\contentsline {subsubsection}{\numberline {3.5.3}Safety and Privacy Constraints}{43}{subsubsection.3.5.3}
+\contentsline {subsubsection}{\numberline {3.5.4}Maintainability}{43}{subsubsection.3.5.4}
+\contentsline {subsubsection}{\numberline {3.5.5}Portability}{43}{subsubsection.3.5.5}
+\contentsline {section}{\numberline {4}Alloy}{44}{section.4}
+\contentsline {subsection}{\numberline {4.1}Alloy Execution Result}{50}{subsection.4.1}
+\contentsline {section}{\numberline {5}Appendix}{52}{section.5}
+\contentsline {section}{\numberline {6}Software Used}{52}{section.6}
+\contentsline {section}{\numberline {7}Hours of Work}{52}{section.7}

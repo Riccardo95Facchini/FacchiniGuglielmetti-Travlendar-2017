@@ -30,7 +30,7 @@
 \textbf{Deliverable:} & RASD\\
 \textbf{Title:} & Requirement Analysis and Verification Document \\
 \textbf{Authors:} & Riccardo Facchini - Andrea Guglielmetti \\
-\textbf{Version:} & 0.8 \\ 
+\textbf{Version:} & 1.1 \\ 
 \textbf{Date:} & \today \\
 \textbf{Download page:} & \url{https://github.com/Riccardo95Facchini/FacchiniGuglielmetti.git} \\
 \textbf{Copyright:} & Copyright © 2017, Riccardo Facchini - Andrea Guglielmetti – All rights reserved \\
@@ -69,8 +69,8 @@
 \label{sect:Alloy}
 \input{Files/Alloy}
 %Appendix-------------------------------------------------------------------
-%\clearpage
-%{\color{Blue}{\section{Appendix}}}
-%\label{sect:Appendix}
-%\input{Files/Appendix}
+\clearpage
+{\color{Blue}{\section{Appendix}}}
+\label{sect:Appendix}
+\input{Files/Appendix}
 \end{document}

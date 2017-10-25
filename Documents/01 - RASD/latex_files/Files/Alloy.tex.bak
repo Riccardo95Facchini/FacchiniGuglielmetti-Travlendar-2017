@@ -1,16 +1,15 @@
-In the following section we present the complete \emph{Class Diagram} in \autoref{fig:ClassDiagram1} and the Alloy code written using the \emph{Alloy Analyzer 4.2} tool given by MIT
+In the following section we present the complete \emph{Class Diagram} in \autoref{ClassDiagram1} and the Alloy code written using the \emph{Alloy Analyzer 4.2} tool given by MIT.\\
+At the end there is also an image of an instance found in \autoref{AlloyInstance}.
 
 \begin{figure}[H]
 \begin{center}
 		\includegraphics[width=\textwidth, angle=90,keepaspectratio=true]{Img/ClassDiagram1}
 		\caption{Class diagram illustrating the structure of the system-to-be.}
-		\label{class_diagram}
+		\label{ClassDiagram1}
 \end{center}
 \end{figure}
 
 \newpage
-
-% Settings for Alloy code listing.
 \lstset{
     language=alloy,
     numbers=left,
@@ -20,34 +19,27 @@ In the following section we present the complete \emph{Class Diagram} in \autore
     keywordstyle=\color{alloy-keyword}\bfseries,
     commentstyle=\color{alloy-comment},
     stringstyle=\color{alloy-string},
-    basicstyle=\small\fontfamily{pcr}\selectfont, % Courier font family
+    basicstyle=\small\fontfamily{pcr}\selectfont,
 }
 
-% Includes the Alloy model file.
 \lstinputlisting{Files/TravlendarAlloy.als}
 \vfill
-\subsection*{Alloy Execution Result}
-Executing "Check noOverlappingEvents for 6 but 1 Calendar"\\
-Solver=sat4j Bitwidth=4 MaxSeq=6 SkolemDepth=1 Symmetry=20\\
-40190 vars. 1845 primary vars. 106352 clauses. 473ms.\\
-No counterexample found. Assertion may be valid. 63ms.\\
-\\
-Executing "Check minimumDurationGuaranteed for 6"\\
-Solver=sat4j Bitwidth=4 MaxSeq=6 SkolemDepth=1 Symmetry=20\\
-41591 vars. 1986 primary vars. 107475 clauses. 221ms.\\
-No counterexample found. Assertion may be valid. 301ms.\\
-\\
-Executing "Check validTrip for 6"\\
-Solver=sat4j Bitwidth=4 MaxSeq=6 SkolemDepth=1 Symmetry=20\\
-40229 vars. 1956 primary vars. 102724 clauses. 155ms.\\
-No counterexample found. Assertion may be valid. 57ms.\\
+\subsection{Alloy Execution Result}
+The following is the result of the execution of the checks:\\
+\begin{figure}[H]
+\begin{center}
+		\includegraphics[width=\textwidth, keepaspectratio=true]{Img/AlloyEx}
+		\caption{Alloy's Execution Result}
+\end{center}
+\end{figure}
+\clearpage
+\subsection*{Instance Found}
 
-Executing "Check noStrikedVehiclesInTrip for 6"\\
-Solver=sat4j Bitwidth=4 MaxSeq=6 SkolemDepth=1 Symmetry=20\\
-43328 vars. 1956 primary vars. 112604 clauses. 157ms.\\
-No counterexample found. Assertion may be valid. 732ms.\\
-\\
-Executing "Run show for 5 but exactly 1 User, 3 Event, 2 Break"\\
-Solver=sat4j Bitwidth=4 MaxSeq=5 SkolemDepth=1 Symmetry=20\\
-14576 vars. 1043 primary vars. 39737 clauses. 38ms.\\
-Instance found. Predicate is consistent. 55ms.\\
+\begin{figure}[H]
+\begin{center}
+	\includegraphics[width=\textwidth, height=\textheight, angle=90, keepaspectratio=true]{Img/AlloyInstance}
+	\caption{Instance of Alloy found.}
+	\label{AlloyInstance}
+\end{center}
+\end{figure}
+

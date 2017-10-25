@@ -1,5 +1,5 @@
 \subsection{Product Perspective}
-The system will have three main parts:
+The system will be divided in three main parts:
 \begin{enumerate}
 \item Mobile application version for phones and tablets.
 \item Web browser version.
@@ -45,7 +45,7 @@ The users interested in using the system should be at least familiar with the co
 \subsection{Domain Assumptions}
 We assume that the following statements are true:
 \begin{enumerate}
-\item It exists a combination of means of transportation that will take the user to his/her destination even if not before the desired time.
+\item There is always at least one possible means of transportation..
 \item The GPS location of the user is always correct.
 \item Weather forecasts have a 100\% accuracy.
 \item Public transportations always arrive on time.
