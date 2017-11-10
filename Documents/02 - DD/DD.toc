@@ -18,7 +18,6 @@
 \contentsline {subsection}{\numberline {2.6}Selected architectural styles and patterns}{12}{subsection.2.6}
 \contentsline {subsection}{\numberline {2.7}Other design decision}{13}{subsection.2.7}
 \contentsline {section}{\numberline {3}Algorithm Design}{14}{section.3}
-\contentsline {subparagraph}{Algorithm}{14}{section*.7}
 \contentsline {section}{\numberline {4}User Interface Design}{15}{section.4}
 \contentsline {subsection}{\numberline {4.1}UserInterfaces}{15}{subsection.4.1}
 \contentsline {section}{\numberline {5}Requirements Traceability}{16}{section.5}
