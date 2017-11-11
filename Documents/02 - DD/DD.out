@@ -27,14 +27,19 @@
 \BOOKMARK [3][-]{subsubsection.2.5.4}{Weather API}{subsection.2.5}% 27
 \BOOKMARK [3][-]{subsubsection.2.5.5}{Road API}{subsection.2.5}% 28
 \BOOKMARK [2][-]{subsection.2.6}{Selected architectural styles and patterns}{section.2}% 29
-\BOOKMARK [2][-]{subsection.2.7}{Other design decision}{section.2}% 30
-\BOOKMARK [1][-]{section.3}{Algorithm Design}{}% 31
-\BOOKMARK [1][-]{section.4}{User Interface Design}{}% 32
-\BOOKMARK [2][-]{subsection.4.1}{UserInterfaces}{section.4}% 33
-\BOOKMARK [1][-]{section.5}{Requirements Traceability}{}% 34
-\BOOKMARK [2][-]{subsection.5.1}{requirements traceability}{section.5}% 35
-\BOOKMARK [1][-]{section.6}{Implementation, Integration and Test Plan}{}% 36
-\BOOKMARK [2][-]{subsection.6.1}{implementation}{section.6}% 37
-\BOOKMARK [1][-]{section.7}{Appendix}{}% 38
-\BOOKMARK [2][-]{subsection.7.1}{Effort Spent}{section.7}% 39
-\BOOKMARK [2][-]{subsection.7.2}{References}{section.7}% 40
+\BOOKMARK [3][-]{subsubsection.2.6.1}{Client-Server}{subsection.2.6}% 30
+\BOOKMARK [3][-]{subsubsection.2.6.2}{Multi Tier}{subsection.2.6}% 31
+\BOOKMARK [3][-]{subsubsection.2.6.3}{Thin Client}{subsection.2.6}% 32
+\BOOKMARK [2][-]{subsection.2.7}{Other design decision}{section.2}% 33
+\BOOKMARK [3][-]{subsubsection.2.7.1}{Google Maps}{subsection.2.7}% 34
+\BOOKMARK [3][-]{subsubsection.2.7.2}{Cryptography}{subsection.2.7}% 35
+\BOOKMARK [1][-]{section.3}{Algorithm Design}{}% 36
+\BOOKMARK [1][-]{section.4}{User Interface Design}{}% 37
+\BOOKMARK [2][-]{subsection.4.1}{UserInterfaces}{section.4}% 38
+\BOOKMARK [1][-]{section.5}{Requirements Traceability}{}% 39
+\BOOKMARK [2][-]{subsection.5.1}{requirements traceability}{section.5}% 40
+\BOOKMARK [1][-]{section.6}{Implementation, Integration and Test Plan}{}% 41
+\BOOKMARK [2][-]{subsection.6.1}{implementation}{section.6}% 42
+\BOOKMARK [1][-]{section.7}{Appendix}{}% 43
+\BOOKMARK [2][-]{subsection.7.1}{Effort Spent}{section.7}% 44
+\BOOKMARK [2][-]{subsection.7.2}{References}{section.7}% 45

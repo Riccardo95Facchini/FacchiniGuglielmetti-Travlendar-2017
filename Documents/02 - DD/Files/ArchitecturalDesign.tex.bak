@@ -47,7 +47,16 @@ In \autoref{fig:hlCD} is possible to see the high level components of the system
 \end{figure}
 
 \subsubsection{Database View}
-%here there are the ER diagram of the database
+The DBMS component provides a database and is DBMS for data storage and their management.
+It is possible to access the database only through the Application Server and an appropriate secure interface.
+For security and privacy reasons, data are encrypted inside the database.
+The Entity-Relationship diagram of the database is showed in \autoref{fig:ERDiagram}.
+
+\begin{figure}
+	\includegraphics[width = \textwidth, keepaspectratio = true]{Img/ERDiagram}
+	\caption{\emph{Entity-Relationship Diagram} of the database}
+	\label{fig:ERDiagram}
+\end{figure}
 
 \subsubsection{Application Server View}
 The \emph{Application Server} contains the main logic of the application. It receives the user's request and interacts with the database to store and retrieves data. 
@@ -83,7 +92,7 @@ The description of the components is the follow:
 \begin{itemize}
 	\item \textbf{User View} is responsible of the graphical representation of the app and the interactions with the user.
 	\item \textbf{GPS Manager} is responsible to interact with the GPS Module of the smart device.
-	\item \textbf{DBMS}, is a physical view of the main database while storing only the current user's data. 
+	\item \textbf{DBMS}, is a physical view of the main database while storing only the current user's data.  It is used by the \emph{Controller} to notify the user when an event is about to start.
 	\item \textbf{Controller}, is responsible to interact with the \emph{Application Server} and link together the other components.
 \end{itemize}
 
@@ -95,6 +104,7 @@ The description of the components is the follow:
 
 \clearpage
 \subsection{Deployment View}
+\label{DeploymentView}
 The architecture chosen for Travlendar+ is a Four-Tier in Three-Layer one, where a high-level mapping layer to component is as follows:
 \begin{itemize}
 \item Presentation Layer: Mobile application/Web application and Web Server
@@ -122,15 +132,138 @@ A complete overview of the technologies chosen can be seen in the decision flow 
 	\caption{Decision Flow Diagram}
 	\label{fig:DecisionFlow}
 \end{figure}
+\newpage
+
+\begin{samepage}
+\subsubsection{Deployment Diagram}
+The deployment diagram can be seen in \autoref{fig:DeploymentDiagram}, note that the components specified in \autoref{fig:mobileapplicationCD} and in \autoref{fig:applicationservercomponentCD} can be seen in this representation of the mapping on concrete devices.
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.40, angle=90]{Img/DeploymentDiagram}
+\caption{Deployment Diagram}
+\label{fig:DeploymentDiagram}
+\end{figure}
+\end{samepage}
 
 \clearpage
 \subsection{Runtime View}
+In this section are represented the most important runtime views by using sequence diagrams that highlight the main interactions between the user and the components of the system for each analysed use case.\\
+Note that each \emph{Error Message} is just an abstraction of different errors with different codes for different situations, this was done in order to simplify the diagrams.
+
+\begin{figure}
+\centering
+\includegraphics[width = \textwidth, keepaspectratio = true, angle=90]{Img/RegistrationSQ}
+\caption{Diagram of interaction between components in the \emph{Registration} use case}
+\label{fig:RegistrationSQ}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics[width = \textwidth, keepaspectratio = true, angle=90]{Img/CreateAppointmentSQ}
+\caption{Diagram of interaction between components in the \emph{Create Appointment} use case, the internal interaction of the path calculator is in \autoref{fig:PathCalculator}}
+\label{fig:CreateAppointmentSQ}
+\end{figure}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width = \textwidth, keepaspectratio = true, angle=90]{Img/ChangeAppointmentSequence}
+\caption{Diagram of the interaction between components in the \emph{Change Appointment} use case, it should be noted that the internal interaction of the path calculator is better specified in \autoref{fig:PathCalculator} in order to keep the diagram as clean as possible}
+\label{fig:ChangeAppointmentSequence}
+\end{figure}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width = \textwidth, keepaspectratio = true, angle=90]{Img/CreateBreakSequence}
+\caption{Diagram of the interaction between components in the \emph{Create Break} use case, the \emph{AppointmentManager} manages also breaks}
+\label{fig:CreateBreakSequence}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics[width = \textwidth, keepaspectratio = true, angle=90]{Img/PathCalculator}
+\caption{Diagram of the interaction between components during a calculation of a path.\\
+The \emph{Path Calculator} asks for information to the \emph{Additional Info Facade}, and, based on this information, prepare the request to send to \emph{Google Maps}}
+\label{fig:PathCalculator}
+\end{figure}
 
 \clearpage
-\subsection{Component Interfaces}
+\subsection{Communication Interfaces}
+\subsubsection{Database Driver}
+This interface is used to allows the interaction between the \emph{Application Server} and the \emph{DBMS}.\\
+There are two different components that interacts with this interface:
+\begin{itemize}
+	\item Account Data Manager, for managing user's information.
+	\item Appointment Data Manager, for managing appointments' information.
+\end{itemize}
+
+\subsubsection{Application Facade}
+This interface provides a common point of access for both the \emph{Mobile Application} component and the \emph{Web Server} component.\\
+It is provided form the \emph{Travlendar+ Facade}.
+
+\subsubsection{Google Maps API}
+This interface can provide:
+\begin{itemize}
+	\item a map of the path from the departure location to the appointment location.
+	\item the ETA with a specific travel means
+	\item the path directions for each travel means.
+\end{itemize}
+The \emph{Path Calculator} component builds the path from the information retrieved from this API.
+
+\subsubsection{Weather API}
+This interface provides a way to obtain the forecast of the appointment date.
+The \emph{Path Calculator} component relies on this informations to take decision about the best path.
+
+\subsubsection{Road API}
+This interface provides a way to obtain information about possible strikes on the appointment date.
+The \emph{Path Calculator} component relies on this informations to take decision about the best path.
 
 \clearpage
 \subsection{Selected architectural styles and patterns}
+In this section we will discuss which architectural styles and were chosen and why.
+\subsubsection{Client-Server}
+The client-server architecture has been used multiple times, we note them all in the following list.
+\begin{enumerate}
+\item The \textbf{mobile application} is the client with regard to the \textbf{application server} (which is of course the server) that handles the requests, this ensures that the mobile application needs the least amount of logic programmed, we will elaborate more on this topic in \autoref{ThinClient}.
+\item The \textbf{web browser} installed onto the user's personal computer acts as a client, while the server is the \textbf{web server} that receives its requests.
+\item The \textbf{web server} is also a client when looking at its relationship with the application server, that has to handle the requests that are sent to the \textbf{web server} from the \textbf{web browser}.
+\item The \textbf{application server} acts like a client too, this appends when it is performing query requests to the \textbf{DBMS} that is the server in the interaction.
+\end{enumerate}
+
+\subsubsection{Multi Tier}
+Already discussed at the start of \autoref{DeploymentView}, a multi tier architecture allows the system to be much more \textbf{scalable} since each physical upgrade can be done without needing an intervention on the entire system.\\
+It should be noted that it also benefits \textbf{fault tolerance} given that the mobile application can function without the need of the web server and it's \textbf{less expensive} to have redundant smaller section of the system rather than duplicating a mainframe.
+
+\subsubsection{Thin Client}
+\label{ThinClient}
+A thin client architecture allows us to develop client side applications and interfaces that do not rely on the computational power of the user's hardware, this means that the system will be accessible even to users that do not own powerful last generation devices , this way the logic of the system is handled entirely by the application server, while the client side applications need only to display the information received from the server side, an abstract representation of the thin client concept can be seen in \autoref{ThinClient}.
+\begin{figure}[h]
+\includegraphics[]{Img/ThinClients}
+\caption{A series of thin clients connected to a server that provides the computational power.}
+\label{ThinClient}
+\end{figure}
 
 \clearpage
 \subsection{Other design decision}
+\subsubsection{Google Maps}
+Given that for a project of this size is not feasible to develop and maintain an entire navigation system, we will rely on \emph{Google Maps} given the extreme flexibility that its APIs offer.\\
+This choice translates in a path calculator that will act more like a \textit{builder for queries}, as it will be discussed more in detail when talking about the algorithms used.
+
+\subsubsection{Cryptography}
+Given that the system has to memorize date, place and travel of the user for each event, privacy concerns can arise.\\
+The system uses the \textbf{Advanced Encryption Standard} (AES) used as a standard by the U.S.A. government in the stronger 256 bits cipher to protect the user's most sensible information (like email and password) and the quicker 128 bits one for the trips data.\\
+Using the method just described the system can still process with relative ease the tasks it is asked to do and even if a brute-force attack could manage to extract information about a trip, the identity of the user would still be almost impossible to decipher before it's obsolete.\\
+Periodic re-ciphering of information is also scheduled when the traffic flow in the system is low.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
