@@ -92,7 +92,7 @@ The description of the components is the follow:
 \begin{itemize}
 	\item \textbf{User View} is responsible of the graphical representation of the app and the interactions with the user.
 	\item \textbf{GPS Manager} is responsible to interact with the GPS Module of the smart device.
-	\item \textbf{DBMS}, is a physical view of the main database while storing only the current user's data. 
+	\item \textbf{DBMS}, is a physical view of the main database while storing only the current user's data.  It is used by the \emph{Controller} to notify the user when an event is about to start.
 	\item \textbf{Controller}, is responsible to interact with the \emph{Application Server} and link together the other components.
 \end{itemize}
 
@@ -136,7 +136,35 @@ A complete overview of the technologies chosen can be seen in the decision flow 
 \subsection{Runtime View}
 
 \clearpage
-\subsection{Component Interfaces}
+\subsection{Communication Interfaces}
+\subsubsection{Database Driver}
+This interface is used to allows the interaction between the \emph{Application Server} and the \emph{DBMS}.\\
+There are two different components that interacts with this interface:
+\begin{itemize}
+	\item Account Data Manager, for managing user's information.
+	\item Appointment Data Manager, for managing appointments' information.
+\end{itemize}
+
+\subsubsection{Application Facade}
+This interface provides a common point of access for both the \emph{Mobile Application} component and the \emph{Web Server} component.\\
+It is provided form the \emph{Travlendar+ Facade}.
+
+\subsubsection{Google Maps API}
+This interface can provide:
+\begin{itemize}
+	\item a map of the path from the departure location to the appointment location.
+	\item the ETA
+	\item the path directions for each travel means.
+\end{itemize}
+The \emph{Path Calculator} component builds the path from the information retrieved from this API.
+
+\subsubsection{Weather API}
+This interface provides a way to obtain the forecast of the appointment date.
+The \emph{Path Calculator} component relies on this informations to take decision about the best path.
+
+\subsubsection{Road API}
+This interface provides a way to obtain information about possible strikes on the appointment date.
+The \emph{Path Calculator} component relies on this informations to take decision about the best path.
 
 \clearpage
 \subsection{Selected architectural styles and patterns}

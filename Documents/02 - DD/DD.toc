@@ -17,36 +17,23 @@
 \contentsline {subsubsection}{\numberline {2.2.3}Application Server View}{8}{subsubsection.2.2.3}
 \contentsline {subsubsection}{\numberline {2.2.4}Web Server}{11}{subsubsection.2.2.4}
 \contentsline {subsubsection}{\numberline {2.2.5}Mobile Application}{11}{subsubsection.2.2.5}
-<<<<<<< HEAD
 \contentsline {subsection}{\numberline {2.3}Deployment View}{14}{subsection.2.3}
-\contentsline {subsection}{\numberline {2.4}Runtime View}{15}{subsection.2.4}
-\contentsline {subsection}{\numberline {2.5}Component Interfaces}{16}{subsection.2.5}
-\contentsline {subsection}{\numberline {2.6}Selected architectural styles and patterns}{17}{subsection.2.6}
-\contentsline {subsection}{\numberline {2.7}Other design decision}{18}{subsection.2.7}
-\contentsline {section}{\numberline {3}Algorithm Design}{19}{section.3}
-\contentsline {section}{\numberline {4}User Interface Design}{20}{section.4}
-\contentsline {subsection}{\numberline {4.1}UserInterfaces}{20}{subsection.4.1}
-\contentsline {section}{\numberline {5}Requirements Traceability}{21}{section.5}
-\contentsline {subsection}{\numberline {5.1}requirements traceability}{21}{subsection.5.1}
-\contentsline {section}{\numberline {6}Implementation, Integration and Test Plan}{22}{section.6}
-\contentsline {subsection}{\numberline {6.1}implementation}{22}{subsection.6.1}
-\contentsline {section}{\numberline {7}Appendix}{23}{section.7}
-\contentsline {subsection}{\numberline {7.1}Effort Spent}{23}{subsection.7.1}
-\contentsline {subsection}{\numberline {7.2}References}{23}{subsection.7.2}
-=======
-\contentsline {subsection}{\numberline {2.3}Deployment View}{12}{subsection.2.3}
-\contentsline {subsection}{\numberline {2.4}Runtime View}{14}{subsection.2.4}
-\contentsline {subsection}{\numberline {2.5}Component Interfaces}{15}{subsection.2.5}
-\contentsline {subsection}{\numberline {2.6}Selected architectural styles and patterns}{16}{subsection.2.6}
-\contentsline {subsection}{\numberline {2.7}Other design decision}{17}{subsection.2.7}
-\contentsline {section}{\numberline {3}Algorithm Design}{18}{section.3}
-\contentsline {section}{\numberline {4}User Interface Design}{19}{section.4}
-\contentsline {subsection}{\numberline {4.1}UserInterfaces}{19}{subsection.4.1}
-\contentsline {section}{\numberline {5}Requirements Traceability}{20}{section.5}
-\contentsline {subsection}{\numberline {5.1}requirements traceability}{20}{subsection.5.1}
-\contentsline {section}{\numberline {6}Implementation, Integration and Test Plan}{21}{section.6}
-\contentsline {subsection}{\numberline {6.1}implementation}{21}{subsection.6.1}
-\contentsline {section}{\numberline {7}Appendix}{22}{section.7}
-\contentsline {subsection}{\numberline {7.1}Effort Spent}{22}{subsection.7.1}
-\contentsline {subsection}{\numberline {7.2}References}{22}{subsection.7.2}
->>>>>>> master
+\contentsline {subsection}{\numberline {2.4}Runtime View}{16}{subsection.2.4}
+\contentsline {subsection}{\numberline {2.5}Communication Interfaces}{17}{subsection.2.5}
+\contentsline {subsubsection}{\numberline {2.5.1}Database Driver}{17}{subsubsection.2.5.1}
+\contentsline {subsubsection}{\numberline {2.5.2}Application Facade}{17}{subsubsection.2.5.2}
+\contentsline {subsubsection}{\numberline {2.5.3}Google Maps API}{17}{subsubsection.2.5.3}
+\contentsline {subsubsection}{\numberline {2.5.4}Weather API}{17}{subsubsection.2.5.4}
+\contentsline {subsubsection}{\numberline {2.5.5}Road API}{17}{subsubsection.2.5.5}
+\contentsline {subsection}{\numberline {2.6}Selected architectural styles and patterns}{18}{subsection.2.6}
+\contentsline {subsection}{\numberline {2.7}Other design decision}{19}{subsection.2.7}
+\contentsline {section}{\numberline {3}Algorithm Design}{20}{section.3}
+\contentsline {section}{\numberline {4}User Interface Design}{21}{section.4}
+\contentsline {subsection}{\numberline {4.1}UserInterfaces}{21}{subsection.4.1}
+\contentsline {section}{\numberline {5}Requirements Traceability}{22}{section.5}
+\contentsline {subsection}{\numberline {5.1}requirements traceability}{22}{subsection.5.1}
+\contentsline {section}{\numberline {6}Implementation, Integration and Test Plan}{23}{section.6}
+\contentsline {subsection}{\numberline {6.1}implementation}{23}{subsection.6.1}
+\contentsline {section}{\numberline {7}Appendix}{24}{section.7}
+\contentsline {subsection}{\numberline {7.1}Effort Spent}{24}{subsection.7.1}
+\contentsline {subsection}{\numberline {7.2}References}{24}{subsection.7.2}
