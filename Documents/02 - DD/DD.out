@@ -20,16 +20,21 @@
 \BOOKMARK [2][-]{subsection.2.3}{Deployment View}{section.2}% 20
 \BOOKMARK [3][-]{subsubsection.2.3.1}{Deployment Diagram}{subsection.2.3}% 21
 \BOOKMARK [2][-]{subsection.2.4}{Runtime View}{section.2}% 22
-\BOOKMARK [2][-]{subsection.2.5}{Component Interfaces}{section.2}% 23
-\BOOKMARK [2][-]{subsection.2.6}{Selected architectural styles and patterns}{section.2}% 24
-\BOOKMARK [2][-]{subsection.2.7}{Other design decision}{section.2}% 25
-\BOOKMARK [1][-]{section.3}{Algorithm Design}{}% 26
-\BOOKMARK [1][-]{section.4}{User Interface Design}{}% 27
-\BOOKMARK [2][-]{subsection.4.1}{UserInterfaces}{section.4}% 28
-\BOOKMARK [1][-]{section.5}{Requirements Traceability}{}% 29
-\BOOKMARK [2][-]{subsection.5.1}{requirements traceability}{section.5}% 30
-\BOOKMARK [1][-]{section.6}{Implementation, Integration and Test Plan}{}% 31
-\BOOKMARK [2][-]{subsection.6.1}{implementation}{section.6}% 32
-\BOOKMARK [1][-]{section.7}{Appendix}{}% 33
-\BOOKMARK [2][-]{subsection.7.1}{Effort Spent}{section.7}% 34
-\BOOKMARK [2][-]{subsection.7.2}{References}{section.7}% 35
+\BOOKMARK [2][-]{subsection.2.5}{Communication Interfaces}{section.2}% 23
+\BOOKMARK [3][-]{subsubsection.2.5.1}{Database Driver}{subsection.2.5}% 24
+\BOOKMARK [3][-]{subsubsection.2.5.2}{Application Facade}{subsection.2.5}% 25
+\BOOKMARK [3][-]{subsubsection.2.5.3}{Google Maps API}{subsection.2.5}% 26
+\BOOKMARK [3][-]{subsubsection.2.5.4}{Weather API}{subsection.2.5}% 27
+\BOOKMARK [3][-]{subsubsection.2.5.5}{Road API}{subsection.2.5}% 28
+\BOOKMARK [2][-]{subsection.2.6}{Selected architectural styles and patterns}{section.2}% 29
+\BOOKMARK [2][-]{subsection.2.7}{Other design decision}{section.2}% 30
+\BOOKMARK [1][-]{section.3}{Algorithm Design}{}% 31
+\BOOKMARK [1][-]{section.4}{User Interface Design}{}% 32
+\BOOKMARK [2][-]{subsection.4.1}{UserInterfaces}{section.4}% 33
+\BOOKMARK [1][-]{section.5}{Requirements Traceability}{}% 34
+\BOOKMARK [2][-]{subsection.5.1}{requirements traceability}{section.5}% 35
+\BOOKMARK [1][-]{section.6}{Implementation, Integration and Test Plan}{}% 36
+\BOOKMARK [2][-]{subsection.6.1}{implementation}{section.6}% 37
+\BOOKMARK [1][-]{section.7}{Appendix}{}% 38
+\BOOKMARK [2][-]{subsection.7.1}{Effort Spent}{section.7}% 39
+\BOOKMARK [2][-]{subsection.7.2}{References}{section.7}% 40

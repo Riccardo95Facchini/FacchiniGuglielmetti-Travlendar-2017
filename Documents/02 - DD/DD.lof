@@ -7,5 +7,8 @@
 \contentsline {figure}{\numberline {7}{\ignorespaces System's Tiers and Layers\relax }}{14}{figure.caption.11}
 \contentsline {figure}{\numberline {8}{\ignorespaces Decision Flow Diagram\relax }}{15}{figure.caption.13}
 \contentsline {figure}{\numberline {9}{\ignorespaces Deployment Diagram\relax }}{16}{figure.caption.14}
-\contentsline {figure}{\numberline {10}{\ignorespaces Diagram of the interaction between components in the \emph {Create Break} use case\relax }}{17}{figure.caption.15}
-\contentsline {figure}{\numberline {11}{\ignorespaces Diagram of the interaction between components in the \emph {Change Appointment} use case, it should be noted that the internal interaction of the path calculator is better specified in its own diagram in order to keep the diagram as clean as possible\relax }}{18}{figure.caption.16}
+\contentsline {figure}{\numberline {10}{\ignorespaces Diagram of the interaction between components in the \emph {Create Break} use case, the \emph {AppointmentManager} manages also breaks\relax }}{17}{figure.caption.15}
+\contentsline {figure}{\numberline {11}{\ignorespaces Diagram of the interaction between components in the \emph {Change Appointment} use case, it should be noted that the internal interaction of the path calculator is better specified in \autoref {fig:PathCalculator} in order to keep the diagram as clean as possible\relax }}{18}{figure.caption.16}
+\contentsline {figure}{\numberline {12}{\ignorespaces Diagram of interaction between components in the \emph {Create Appointment} use case, the internal interaction of the path calculator is in \autoref {fig:PathCalculator}\relax }}{19}{figure.caption.17}
+\contentsline {figure}{\numberline {13}{\ignorespaces Diagram of interaction between components in the \emph {Registration} use case\relax }}{20}{figure.caption.18}
+\contentsline {figure}{\numberline {14}{\ignorespaces Diagram of the interaction between components during a calculation of a path. The \emph {Path Calculator} asks for information to the \emph {Additional Info Facade}, and, based on this information, prepare the request to send to \emph {Google Maps}\relax }}{21}{figure.caption.19}

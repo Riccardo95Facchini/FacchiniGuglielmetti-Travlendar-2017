@@ -149,18 +149,40 @@ The deployment diagram can be seen in \autoref{fig:DeploymentDiagram}, note that
 In this section are represented the most important runtime views by using sequence diagrams that highlight the main interactions between the user and the components of the system for each analysed use case.\\
 Note that each \emph{Error Message} is just an abstraction of different errors with different codes for different situations, this was done in order to simplify the diagrams.
 
-\begin{figure}[h]
+\begin{figure}
 \centering
-\includegraphics[width = \textwidth, keepaspectratio = true, angle=90]{Img/CreateBreakSequence}
-\caption{Diagram of the interaction between components in the \emph{Create Break} use case}
-\label{fig:CreateBreakSequence}
+\includegraphics[width = \textwidth, keepaspectratio = true, angle=90]{Img/RegistrationSQ}
+\caption{Diagram of interaction between components in the \emph{Registration} use case}
+\label{fig:RegistrationSQ}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics[width = \textwidth, keepaspectratio = true, angle=90]{Img/CreateAppointmentSQ}
+\caption{Diagram of interaction between components in the \emph{Create Appointment} use case, the internal interaction of the path calculator is in \autoref{fig:PathCalculator}}
+\label{fig:CreateAppointmentSQ}
 \end{figure}
 
 \begin{figure}[h]
 \centering
 \includegraphics[width = \textwidth, keepaspectratio = true, angle=90]{Img/ChangeAppointmentSequence}
-\caption{Diagram of the interaction between components in the \emph{Change Appointment} use case, it should be noted that the internal interaction of the path calculator is better specified in its own diagram in order to keep the diagram as clean as possible}
+\caption{Diagram of the interaction between components in the \emph{Change Appointment} use case, it should be noted that the internal interaction of the path calculator is better specified in \autoref{fig:PathCalculator} in order to keep the diagram as clean as possible}
 \label{fig:ChangeAppointmentSequence}
+\end{figure}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width = \textwidth, keepaspectratio = true, angle=90]{Img/CreateBreakSequence}
+\caption{Diagram of the interaction between components in the \emph{Create Break} use case, the \emph{AppointmentManager} manages also breaks}
+\label{fig:CreateBreakSequence}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics[width = \textwidth, keepaspectratio = true, angle=90]{Img/PathCalculator}
+\caption{Diagram of the interaction between components during a calculation of a path.\\
+The \emph{Path Calculator} asks for information to the \emph{Additional Info Facade}, and, based on this information, prepare the request to send to \emph{Google Maps}}
+\label{fig:PathCalculator}
 \end{figure}
 
 \clearpage
@@ -181,7 +203,7 @@ It is provided form the \emph{Travlendar+ Facade}.
 This interface can provide:
 \begin{itemize}
 	\item a map of the path from the departure location to the appointment location.
-	\item the ETA
+	\item the ETA with a specific travel means
 	\item the path directions for each travel means.
 \end{itemize}
 The \emph{Path Calculator} component builds the path from the information retrieved from this API.

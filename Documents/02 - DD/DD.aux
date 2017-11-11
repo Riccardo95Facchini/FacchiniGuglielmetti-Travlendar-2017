@@ -59,25 +59,36 @@
 \@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces Deployment Diagram\relax }}{16}{figure.caption.14}}
 \newlabel{fig:DeploymentDiagram}{{9}{16}{Deployment Diagram\relax }{figure.caption.14}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.4}Runtime View}{17}{subsection.2.4}}
-\@writefile{lof}{\contentsline {figure}{\numberline {10}{\ignorespaces Diagram of the interaction between components in the \emph  {Create Break} use case\relax }}{17}{figure.caption.15}}
-\newlabel{fig:CreateBreakSequence}{{10}{17}{Diagram of the interaction between components in the \emph {Create Break} use case\relax }{figure.caption.15}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {11}{\ignorespaces Diagram of the interaction between components in the \emph  {Change Appointment} use case, it should be noted that the internal interaction of the path calculator is better specified in its own diagram in order to keep the diagram as clean as possible\relax }}{18}{figure.caption.16}}
-\newlabel{fig:ChangeAppointmentSequence}{{11}{18}{Diagram of the interaction between components in the \emph {Change Appointment} use case, it should be noted that the internal interaction of the path calculator is better specified in its own diagram in order to keep the diagram as clean as possible\relax }{figure.caption.16}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.5}Component Interfaces}{19}{subsection.2.5}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.6}Selected architectural styles and patterns}{20}{subsection.2.6}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.7}Other design decision}{21}{subsection.2.7}}
-\@writefile{toc}{\contentsline {section}{\numberline {3}Algorithm Design}{22}{section.3}}
-\newlabel{sect:AlgorithmDesign}{{2.7}{22}{Other design decision}{section.3}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {4}User Interface Design}{23}{section.4}}
-\newlabel{sect:UserInterfaceDesign}{{2.7}{23}{Introduction\\}{section.4}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}UserInterfaces}{23}{subsection.4.1}}
-\@writefile{toc}{\contentsline {section}{\numberline {5}Requirements Traceability}{24}{section.5}}
-\newlabel{sect:RequirementsTraceability}{{4.1}{24}{UserInterfaces}{section.5}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.1}requirements traceability}{24}{subsection.5.1}}
-\@writefile{toc}{\contentsline {section}{\numberline {6}Implementation, Integration and Test Plan}{25}{section.6}}
-\newlabel{sect:ImplementationIntegrationTestPlan}{{5.1}{25}{requirements traceability}{section.6}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.1}implementation}{25}{subsection.6.1}}
-\@writefile{toc}{\contentsline {section}{\numberline {7}Appendix}{26}{section.7}}
-\newlabel{sect:Appendix}{{6.1}{26}{implementation}{section.7}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {7.1}Effort Spent}{26}{subsection.7.1}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {7.2}References}{26}{subsection.7.2}}
+\@writefile{lof}{\contentsline {figure}{\numberline {10}{\ignorespaces Diagram of the interaction between components in the \emph  {Create Break} use case, the \emph  {AppointmentManager} manages also breaks\relax }}{17}{figure.caption.15}}
+\newlabel{fig:CreateBreakSequence}{{10}{17}{Diagram of the interaction between components in the \emph {Create Break} use case, the \emph {AppointmentManager} manages also breaks\relax }{figure.caption.15}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {11}{\ignorespaces Diagram of the interaction between components in the \emph  {Change Appointment} use case, it should be noted that the internal interaction of the path calculator is better specified in \autoref  {fig:PathCalculator} in order to keep the diagram as clean as possible\relax }}{18}{figure.caption.16}}
+\newlabel{fig:ChangeAppointmentSequence}{{11}{18}{Diagram of the interaction between components in the \emph {Change Appointment} use case, it should be noted that the internal interaction of the path calculator is better specified in \autoref {fig:PathCalculator} in order to keep the diagram as clean as possible\relax }{figure.caption.16}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {12}{\ignorespaces Diagram of interaction between components in the \emph  {Create Appointment} use case, the internal interaction of the path calculator is in \autoref  {fig:PathCalculator}\relax }}{19}{figure.caption.17}}
+\newlabel{fig:CreateAppointmentSQ}{{12}{19}{Diagram of interaction between components in the \emph {Create Appointment} use case, the internal interaction of the path calculator is in \autoref {fig:PathCalculator}\relax }{figure.caption.17}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {13}{\ignorespaces Diagram of interaction between components in the \emph  {Registration} use case\relax }}{20}{figure.caption.18}}
+\newlabel{fig:RegistrationSQ}{{13}{20}{Diagram of interaction between components in the \emph {Registration} use case\relax }{figure.caption.18}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {14}{\ignorespaces Diagram of the interaction between components during a calculation of a path.  The \emph  {Path Calculator} asks for information to the \emph  {Additional Info Facade}, and, based on this information, prepare the request to send to \emph  {Google Maps}\relax }}{21}{figure.caption.19}}
+\newlabel{fig:PathCalculator}{{14}{21}{Diagram of the interaction between components during a calculation of a path.\\ The \emph {Path Calculator} asks for information to the \emph {Additional Info Facade}, and, based on this information, prepare the request to send to \emph {Google Maps}\relax }{figure.caption.19}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.5}Communication Interfaces}{22}{subsection.2.5}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.5.1}Database Driver}{22}{subsubsection.2.5.1}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.5.2}Application Facade}{22}{subsubsection.2.5.2}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.5.3}Google Maps API}{22}{subsubsection.2.5.3}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.5.4}Weather API}{22}{subsubsection.2.5.4}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.5.5}Road API}{22}{subsubsection.2.5.5}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.6}Selected architectural styles and patterns}{23}{subsection.2.6}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.7}Other design decision}{24}{subsection.2.7}}
+\@writefile{toc}{\contentsline {section}{\numberline {3}Algorithm Design}{25}{section.3}}
+\newlabel{sect:AlgorithmDesign}{{2.7}{25}{Other design decision}{section.3}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {4}User Interface Design}{26}{section.4}}
+\newlabel{sect:UserInterfaceDesign}{{2.7}{26}{Introduction\\}{section.4}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}UserInterfaces}{26}{subsection.4.1}}
+\@writefile{toc}{\contentsline {section}{\numberline {5}Requirements Traceability}{27}{section.5}}
+\newlabel{sect:RequirementsTraceability}{{4.1}{27}{UserInterfaces}{section.5}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.1}requirements traceability}{27}{subsection.5.1}}
+\@writefile{toc}{\contentsline {section}{\numberline {6}Implementation, Integration and Test Plan}{28}{section.6}}
+\newlabel{sect:ImplementationIntegrationTestPlan}{{5.1}{28}{requirements traceability}{section.6}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.1}implementation}{28}{subsection.6.1}}
+\@writefile{toc}{\contentsline {section}{\numberline {7}Appendix}{29}{section.7}}
+\newlabel{sect:Appendix}{{6.1}{29}{implementation}{section.7}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.1}Effort Spent}{29}{subsection.7.1}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.2}References}{29}{subsection.7.2}}

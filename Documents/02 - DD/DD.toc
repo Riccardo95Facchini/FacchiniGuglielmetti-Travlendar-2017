@@ -20,16 +20,21 @@
 \contentsline {subsection}{\numberline {2.3}Deployment View}{14}{subsection.2.3}
 \contentsline {subsubsection}{\numberline {2.3.1}Deployment Diagram}{16}{subsubsection.2.3.1}
 \contentsline {subsection}{\numberline {2.4}Runtime View}{17}{subsection.2.4}
-\contentsline {subsection}{\numberline {2.5}Component Interfaces}{19}{subsection.2.5}
-\contentsline {subsection}{\numberline {2.6}Selected architectural styles and patterns}{20}{subsection.2.6}
-\contentsline {subsection}{\numberline {2.7}Other design decision}{21}{subsection.2.7}
-\contentsline {section}{\numberline {3}Algorithm Design}{22}{section.3}
-\contentsline {section}{\numberline {4}User Interface Design}{23}{section.4}
-\contentsline {subsection}{\numberline {4.1}UserInterfaces}{23}{subsection.4.1}
-\contentsline {section}{\numberline {5}Requirements Traceability}{24}{section.5}
-\contentsline {subsection}{\numberline {5.1}requirements traceability}{24}{subsection.5.1}
-\contentsline {section}{\numberline {6}Implementation, Integration and Test Plan}{25}{section.6}
-\contentsline {subsection}{\numberline {6.1}implementation}{25}{subsection.6.1}
-\contentsline {section}{\numberline {7}Appendix}{26}{section.7}
-\contentsline {subsection}{\numberline {7.1}Effort Spent}{26}{subsection.7.1}
-\contentsline {subsection}{\numberline {7.2}References}{26}{subsection.7.2}
+\contentsline {subsection}{\numberline {2.5}Communication Interfaces}{22}{subsection.2.5}
+\contentsline {subsubsection}{\numberline {2.5.1}Database Driver}{22}{subsubsection.2.5.1}
+\contentsline {subsubsection}{\numberline {2.5.2}Application Facade}{22}{subsubsection.2.5.2}
+\contentsline {subsubsection}{\numberline {2.5.3}Google Maps API}{22}{subsubsection.2.5.3}
+\contentsline {subsubsection}{\numberline {2.5.4}Weather API}{22}{subsubsection.2.5.4}
+\contentsline {subsubsection}{\numberline {2.5.5}Road API}{22}{subsubsection.2.5.5}
+\contentsline {subsection}{\numberline {2.6}Selected architectural styles and patterns}{23}{subsection.2.6}
+\contentsline {subsection}{\numberline {2.7}Other design decision}{24}{subsection.2.7}
+\contentsline {section}{\numberline {3}Algorithm Design}{25}{section.3}
+\contentsline {section}{\numberline {4}User Interface Design}{26}{section.4}
+\contentsline {subsection}{\numberline {4.1}UserInterfaces}{26}{subsection.4.1}
+\contentsline {section}{\numberline {5}Requirements Traceability}{27}{section.5}
+\contentsline {subsection}{\numberline {5.1}requirements traceability}{27}{subsection.5.1}
+\contentsline {section}{\numberline {6}Implementation, Integration and Test Plan}{28}{section.6}
+\contentsline {subsection}{\numberline {6.1}implementation}{28}{subsection.6.1}
+\contentsline {section}{\numberline {7}Appendix}{29}{section.7}
+\contentsline {subsection}{\numberline {7.1}Effort Spent}{29}{subsection.7.1}
+\contentsline {subsection}{\numberline {7.2}References}{29}{subsection.7.2}
