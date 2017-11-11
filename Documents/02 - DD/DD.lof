@@ -1,6 +1,13 @@
 \contentsline {figure}{\numberline {1}{\ignorespaces Client Server architecture\relax }}{6}{figure.caption.5}
 \contentsline {figure}{\numberline {2}{\ignorespaces Overview of the system architecture\relax }}{7}{figure.caption.6}
 \contentsline {figure}{\numberline {3}{\ignorespaces High level Component Diagram\relax }}{9}{figure.caption.7}
+<<<<<<< HEAD
 \contentsline {figure}{\numberline {4}{\ignorespaces \emph {Entity-Relationship Diagram} of the database\relax }}{10}{figure.caption.8}
 \contentsline {figure}{\numberline {5}{\ignorespaces \emph {Application Server} component diagram\relax }}{12}{figure.caption.9}
 \contentsline {figure}{\numberline {6}{\ignorespaces \emph {Mobile Application} component diagram\relax }}{13}{figure.caption.10}
+=======
+\contentsline {figure}{\numberline {4}{\ignorespaces \emph {Application Server} component diagram\relax }}{10}{figure.caption.8}
+\contentsline {figure}{\numberline {5}{\ignorespaces \emph {Mobile Application} component diagram\relax }}{11}{figure.caption.9}
+\contentsline {figure}{\numberline {6}{\ignorespaces System's Tiers and Layers\relax }}{12}{figure.caption.10}
+\contentsline {figure}{\numberline {7}{\ignorespaces Decision Flow Diagram\relax }}{13}{figure.caption.12}
+>>>>>>> master
