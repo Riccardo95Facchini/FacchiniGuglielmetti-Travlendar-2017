@@ -47,7 +47,16 @@ In \autoref{fig:hlCD} is possible to see the high level components of the system
 \end{figure}
 
 \subsubsection{Database View}
-%here there are the ER diagram of the database
+The DBMS component provides a database and is DBMS for data storage and their management.
+It is possible to access the database only through the Application Server and an appropriate secure interface.
+For security and privacy reasons, data are encrypted inside the database.
+The Entity-Relationship diagram of the database is showed in \autoref{fig:ERDiagram}.
+
+\begin{figure}
+	\includegraphics[width = \textwidth, keepaspectratio = true]{Img/ERDiagram}
+	\caption{\emph{Entity-Relationship Diagram} of the database}
+	\label{fig:ERDiagram}
+\end{figure}
 
 \subsubsection{Application Server View}
 The \emph{Application Server} contains the main logic of the application. It receives the user's request and interacts with the database to store and retrieves data. 
