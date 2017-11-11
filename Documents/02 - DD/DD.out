@@ -18,17 +18,18 @@
 \BOOKMARK [3][-]{subsubsection.2.2.4}{Web Server}{subsection.2.2}% 18
 \BOOKMARK [3][-]{subsubsection.2.2.5}{Mobile Application}{subsection.2.2}% 19
 \BOOKMARK [2][-]{subsection.2.3}{Deployment View}{section.2}% 20
-\BOOKMARK [2][-]{subsection.2.4}{Runtime View}{section.2}% 21
-\BOOKMARK [2][-]{subsection.2.5}{Component Interfaces}{section.2}% 22
-\BOOKMARK [2][-]{subsection.2.6}{Selected architectural styles and patterns}{section.2}% 23
-\BOOKMARK [2][-]{subsection.2.7}{Other design decision}{section.2}% 24
-\BOOKMARK [1][-]{section.3}{Algorithm Design}{}% 25
-\BOOKMARK [1][-]{section.4}{User Interface Design}{}% 26
-\BOOKMARK [2][-]{subsection.4.1}{UserInterfaces}{section.4}% 27
-\BOOKMARK [1][-]{section.5}{Requirements Traceability}{}% 28
-\BOOKMARK [2][-]{subsection.5.1}{requirements traceability}{section.5}% 29
-\BOOKMARK [1][-]{section.6}{Implementation, Integration and Test Plan}{}% 30
-\BOOKMARK [2][-]{subsection.6.1}{implementation}{section.6}% 31
-\BOOKMARK [1][-]{section.7}{Appendix}{}% 32
-\BOOKMARK [2][-]{subsection.7.1}{Effort Spent}{section.7}% 33
-\BOOKMARK [2][-]{subsection.7.2}{References}{section.7}% 34
+\BOOKMARK [3][-]{subsubsection.2.3.1}{Deployment Diagram}{subsection.2.3}% 21
+\BOOKMARK [2][-]{subsection.2.4}{Runtime View}{section.2}% 22
+\BOOKMARK [2][-]{subsection.2.5}{Component Interfaces}{section.2}% 23
+\BOOKMARK [2][-]{subsection.2.6}{Selected architectural styles and patterns}{section.2}% 24
+\BOOKMARK [2][-]{subsection.2.7}{Other design decision}{section.2}% 25
+\BOOKMARK [1][-]{section.3}{Algorithm Design}{}% 26
+\BOOKMARK [1][-]{section.4}{User Interface Design}{}% 27
+\BOOKMARK [2][-]{subsection.4.1}{UserInterfaces}{section.4}% 28
+\BOOKMARK [1][-]{section.5}{Requirements Traceability}{}% 29
+\BOOKMARK [2][-]{subsection.5.1}{requirements traceability}{section.5}% 30
+\BOOKMARK [1][-]{section.6}{Implementation, Integration and Test Plan}{}% 31
+\BOOKMARK [2][-]{subsection.6.1}{implementation}{section.6}% 32
+\BOOKMARK [1][-]{section.7}{Appendix}{}% 33
+\BOOKMARK [2][-]{subsection.7.1}{Effort Spent}{section.7}% 34
+\BOOKMARK [2][-]{subsection.7.2}{References}{section.7}% 35

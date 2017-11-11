@@ -17,36 +17,19 @@
 \contentsline {subsubsection}{\numberline {2.2.3}Application Server View}{8}{subsubsection.2.2.3}
 \contentsline {subsubsection}{\numberline {2.2.4}Web Server}{11}{subsubsection.2.2.4}
 \contentsline {subsubsection}{\numberline {2.2.5}Mobile Application}{11}{subsubsection.2.2.5}
-<<<<<<< HEAD
 \contentsline {subsection}{\numberline {2.3}Deployment View}{14}{subsection.2.3}
-\contentsline {subsection}{\numberline {2.4}Runtime View}{15}{subsection.2.4}
-\contentsline {subsection}{\numberline {2.5}Component Interfaces}{16}{subsection.2.5}
-\contentsline {subsection}{\numberline {2.6}Selected architectural styles and patterns}{17}{subsection.2.6}
-\contentsline {subsection}{\numberline {2.7}Other design decision}{18}{subsection.2.7}
-\contentsline {section}{\numberline {3}Algorithm Design}{19}{section.3}
-\contentsline {section}{\numberline {4}User Interface Design}{20}{section.4}
-\contentsline {subsection}{\numberline {4.1}UserInterfaces}{20}{subsection.4.1}
-\contentsline {section}{\numberline {5}Requirements Traceability}{21}{section.5}
-\contentsline {subsection}{\numberline {5.1}requirements traceability}{21}{subsection.5.1}
-\contentsline {section}{\numberline {6}Implementation, Integration and Test Plan}{22}{section.6}
-\contentsline {subsection}{\numberline {6.1}implementation}{22}{subsection.6.1}
-\contentsline {section}{\numberline {7}Appendix}{23}{section.7}
-\contentsline {subsection}{\numberline {7.1}Effort Spent}{23}{subsection.7.1}
-\contentsline {subsection}{\numberline {7.2}References}{23}{subsection.7.2}
-=======
-\contentsline {subsection}{\numberline {2.3}Deployment View}{12}{subsection.2.3}
-\contentsline {subsection}{\numberline {2.4}Runtime View}{14}{subsection.2.4}
-\contentsline {subsection}{\numberline {2.5}Component Interfaces}{15}{subsection.2.5}
-\contentsline {subsection}{\numberline {2.6}Selected architectural styles and patterns}{16}{subsection.2.6}
-\contentsline {subsection}{\numberline {2.7}Other design decision}{17}{subsection.2.7}
-\contentsline {section}{\numberline {3}Algorithm Design}{18}{section.3}
-\contentsline {section}{\numberline {4}User Interface Design}{19}{section.4}
-\contentsline {subsection}{\numberline {4.1}UserInterfaces}{19}{subsection.4.1}
-\contentsline {section}{\numberline {5}Requirements Traceability}{20}{section.5}
-\contentsline {subsection}{\numberline {5.1}requirements traceability}{20}{subsection.5.1}
-\contentsline {section}{\numberline {6}Implementation, Integration and Test Plan}{21}{section.6}
-\contentsline {subsection}{\numberline {6.1}implementation}{21}{subsection.6.1}
-\contentsline {section}{\numberline {7}Appendix}{22}{section.7}
-\contentsline {subsection}{\numberline {7.1}Effort Spent}{22}{subsection.7.1}
-\contentsline {subsection}{\numberline {7.2}References}{22}{subsection.7.2}
->>>>>>> master
+\contentsline {subsubsection}{\numberline {2.3.1}Deployment Diagram}{16}{subsubsection.2.3.1}
+\contentsline {subsection}{\numberline {2.4}Runtime View}{17}{subsection.2.4}
+\contentsline {subsection}{\numberline {2.5}Component Interfaces}{19}{subsection.2.5}
+\contentsline {subsection}{\numberline {2.6}Selected architectural styles and patterns}{20}{subsection.2.6}
+\contentsline {subsection}{\numberline {2.7}Other design decision}{21}{subsection.2.7}
+\contentsline {section}{\numberline {3}Algorithm Design}{22}{section.3}
+\contentsline {section}{\numberline {4}User Interface Design}{23}{section.4}
+\contentsline {subsection}{\numberline {4.1}UserInterfaces}{23}{subsection.4.1}
+\contentsline {section}{\numberline {5}Requirements Traceability}{24}{section.5}
+\contentsline {subsection}{\numberline {5.1}requirements traceability}{24}{subsection.5.1}
+\contentsline {section}{\numberline {6}Implementation, Integration and Test Plan}{25}{section.6}
+\contentsline {subsection}{\numberline {6.1}implementation}{25}{subsection.6.1}
+\contentsline {section}{\numberline {7}Appendix}{26}{section.7}
+\contentsline {subsection}{\numberline {7.1}Effort Spent}{26}{subsection.7.1}
+\contentsline {subsection}{\numberline {7.2}References}{26}{subsection.7.2}
