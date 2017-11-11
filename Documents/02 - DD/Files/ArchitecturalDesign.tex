@@ -131,9 +131,37 @@ A complete overview of the technologies chosen can be seen in the decision flow 
 	\caption{Decision Flow Diagram}
 	\label{fig:DecisionFlow}
 \end{figure}
+\newpage
+
+\begin{samepage}
+\subsubsection{Deployment Diagram}
+The deployment diagram can be seen in \autoref{fig:DeploymentDiagram}, note that the components specified in \autoref{fig:mobileapplicationCD} and in \autoref{fig:applicationservercomponentCD} can be seen in this representation of the mapping on concrete devices.
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.40, angle=90]{Img/DeploymentDiagram}
+\caption{Deployment Diagram}
+\label{fig:DeploymentDiagram}
+\end{figure}
+\end{samepage}
 
 \clearpage
 \subsection{Runtime View}
+In this section are represented the most important runtime views by using sequence diagrams that highlight the main interactions between the user and the components of the system for each analysed use case.\\
+Note that each \emph{Error Message} is just an abstraction of different errors with different codes for different situations, this was done in order to simplify the diagrams.
+
+\begin{figure}[h]
+\centering
+\includegraphics[width = \textwidth, keepaspectratio = true, angle=90]{Img/CreateBreakSequence}
+\caption{Diagram of the interaction between components in the \emph{Create Break} use case}
+\label{fig:CreateBreakSequence}
+\end{figure}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width = \textwidth, keepaspectratio = true, angle=90]{Img/ChangeAppointmentSequence}
+\caption{Diagram of the interaction between components in the \emph{Change Appointment} use case, it should be noted that the internal interaction of the path calculator is better specified in its own diagram in order to keep the diagram as clean as possible}
+\label{fig:ChangeAppointmentSequence}
+\end{figure}
 
 \clearpage
 \subsection{Communication Interfaces}
