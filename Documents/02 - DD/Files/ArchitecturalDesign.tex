@@ -104,6 +104,7 @@ The description of the components is the follow:
 
 \clearpage
 \subsection{Deployment View}
+\label{DeploymentView}
 The architecture chosen for Travlendar+ is a Four-Tier in Three-Layer one, where a high-level mapping layer to component is as follows:
 \begin{itemize}
 \item Presentation Layer: Mobile application/Web application and Web Server
@@ -218,6 +219,51 @@ The \emph{Path Calculator} component relies on this informations to take decisio
 
 \clearpage
 \subsection{Selected architectural styles and patterns}
+In this section we will discuss which architectural styles and were chosen and why.
+\subsubsection{Client-Server}
+The client-server architecture has been used multiple times, we note them all in the following list.
+\begin{enumerate}
+\item The \textbf{mobile application} is the client with regard to the \textbf{application server} (which is of course the server) that handles the requests, this ensures that the mobile application needs the least amount of logic programmed, we will elaborate more on this topic in \autoref{ThinClient}.
+\item The \textbf{web browser} installed onto the user's personal computer acts as a client, while the server is the \textbf{web server} that receives its requests.
+\item The \textbf{web server} is also a client when looking at its relationship with the application server, that has to handle the requests that are sent to the \textbf{web server} from the \textbf{web browser}.
+\item The \textbf{application server} acts like a client too, this appends when it is performing query requests to the \textbf{DBMS} that is the server in the interaction.
+\end{enumerate}
+
+\subsubsection{Multi Tier}
+Already discussed at the start of \autoref{DeploymentView}, a multi tier architecture allows the system to be much more \textbf{scalable} since each physical upgrade can be done without needing an intervention on the entire system.\\
+It should be noted that it also benefits \textbf{fault tolerance} given that the mobile application can function without the need of the web server and it's \textbf{less expensive} to have redundant smaller section of the system rather than duplicating a mainframe.
+
+\subsubsection{Thin Client}
+\label{ThinClient}
+A thin client architecture allows us to develop client side applications and interfaces that do not rely on the computational power of the user's hardware, this means that the system will be accessible even to users that do not own powerful last generation devices , this way the logic of the system is handled entirely by the application server, while the client side applications need only to display the information received from the server side, an abstract representation of the thin client concept can be seen in \autoref{ThinClient}.
+\begin{figure}[h]
+\includegraphics[]{Img/ThinClients}
+\caption{A series of thin clients connected to a server that provides the computational power.}
+\label{ThinClient}
+\end{figure}
 
 \clearpage
 \subsection{Other design decision}
+\subsubsection{Google Maps}
+Given that for a project of this size is not feasible to develop and maintain an entire navigation system, we will rely on \emph{Google Maps} given the extreme flexibility that its APIs offer.\\
+This choice translates in a path calculator that will act more like a \textit{builder for queries}, as it will be discussed more in detail when talking about the algorithms used.
+
+\subsubsection{Cryptography}
+Given that the system has to memorize date, place and travel of the user for each event, privacy concerns can arise.\\
+The system uses the \textbf{Advanced Encryption Standard} (AES) used as a standard by the U.S.A. government in the stronger 256 bits cipher to protect the user's most sensible information (like email and password) and the quicker 128 bits one for the trips data.\\
+Using the method just described the system can still process with relative ease the tasks it is asked to do and even if a brute-force attack could manage to extract information about a trip, the identity of the user would still be almost impossible to decipher before it's obsolete.\\
+Periodic re-ciphering of information is also scheduled when the traffic flow in the system is low.
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,16 +1,15 @@
 \subsection{Purpose}
-This Requirement Analysis and Specification Document (RASD for short) document has the purpose of fully describing to a wide range of potential readers the system and to function as a base for legal agreements between developers and other parties.
-\\In the following pages there will be precise descriptions of all the functional and non-functional requirements, the different scenarios and cases of interaction between the system and the users, with attention to what the users need from it, the domain of the system and the constraints that it implies.
-\\The readers of this document comprise the developers of the system and its applications and agents from the local public transportation agencies or independent company in similar professions such as taxi businesses or bike/car sharing companies.
+This Requirement Analysis and Specification Document (RASD for short) has the purpose of fully describing to a wide range of potential readers the system and to function as a base for legal agreements between developers and other parties.
+\\In the following pages there will be precise descriptions of all the functional and non-functional requirements, the different scenarios and cases of interaction between the system and the users, with attention to what the users need from it, the domain of the system and the constraints implied.
+\\The readers of this document are the developers of the system and its applications, agents from the local public transportation agencies and independent company in similar professions such as taxi businesses or bike/car sharing companies.
 \subsection{Scope}
-The scope of this project is to develop a system called Travlendar+ that will allow in the most possible efficient way the paring of daily commutes and the management of scheduled appointments and meetings, by providing for each situation the best alternatives of moving throughout the city both for work related reasons and for personal motives. 
+The scope of this project is to develop a system called Travlendar+ that will allow in the most efficient way possible the paring of daily commutes and the management of scheduled appointments and meetings, by providing for each situation the best alternatives of moving throughout the city both for work related reasons and for personal motives. 
 \\Users of Travlendar+ can create a calendar with every appointment paired with time and place, the system will then compute the best way of reaching each location in time by choosing between every commuting option available at the moment and taking into account the preferences expressed by the user in the customization settings, possible strikes of the local transportation services and the weather, if the location is too far and cannot be reached in time a warning is going to pop up on the screen of the user.
-\\Each time a scheduled appointment is coming up a notification is going to appear in advance by a configurable amount of time, the user will then be able to confirm, change or refuse the proposed trip.
 \subsection{Stakeholders}
 Here are listed all the potential stakeholders with a brief description and how they may be affected by the system:
 \begin{itemize}
 \item \textbf{User}: All the individuals that will use the system to schedule their daily commute.
-\item \textbf{Public transportation companies}: Local and international companies that handle public transportation may have an advantage in giving an easy way to integrate their schedules with Travlendar+ as it could mean a higher number of sold tickets.
+\item \textbf{Public transportation companies}: Local and national companies that handle public transportation may have an advantage in giving an easy way to integrate their schedules with Travlendar+ as it could mean a higher number of sold tickets.
 \item \textbf{Taxi and Car/Bike sharing companies}: Given that is not always possible for each type of user to walk long distances and public transport does not reach every possible destination they may be interested in a partnership between their service and the system.
 \item \textbf{Mobile network carriers}: They have an interest in providing a network and contracts to connect devices to the service.
 \end{itemize}
@@ -45,7 +44,9 @@ What follows is the list of all the main terms and abbreviations used in the doc
 No other abbreviations aside from acronyms were used.
 \subsubsection{Revision History}
 \begin{itemize}
-\item
+\item 25/10/2017 Small changes and fixes to grammar and pages structure.
+\item 10/11/2017 Added Goals as section 2.4
+\item 12/11/2017 Changes to goals
 \end{itemize}
 \subsection{Reference documents}
 \begin{itemize}
