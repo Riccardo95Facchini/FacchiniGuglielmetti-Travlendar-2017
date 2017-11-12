@@ -547,7 +547,7 @@ The main purpose of this use case is to grant the user the possibility to view a
 	\item The user must be logged in.
 	\item The system must shows all the information inserted during the registration process, except the password.
 	\item {\label{req:startmanage}} The system allows the user to update every information except the e-mail used to login.
-	\item The user must insert the old password once and twice the new password in order to update his/her password.
+	\item The user must insert the old password once and the new one twice in order to update his/her password.
 	\item The system allows to change the password if and only if the old one has been inserted correctly.
 	\item {\label{req:endmanage}}The system does not allow the user to update the password if the new one has not been inserted twice.
 	\item The system makes every changes permanent as soon as the user confirms the operation.
@@ -555,13 +555,13 @@ The main purpose of this use case is to grant the user the possibility to view a
 	\item The system removes from the database the user's personal information if and only if the user deletes his/her account.
 \end{enumerate}
 
-\paragraph*{Scenario\\}
+\paragraph*{Scenario 1\\}
+Carlo wants to change his password because it does not seem quite strong for him. He opens his \emph{Travlendar+} app, selects "\emph{Show my information}", "\emph{Modify my information}" and then "\emph{Modify password}". He enters his old password and the new password twice. The old password is written correctly, so the system accepts the new password.\\
+\paragraph*{Scenario 2\\} 
+Bob does not use very often \emph{Travlendar+}, so he decides to uninstall the app, but first he wants to delete his account. He opens the app, select "\emph{Show my information}", "\emph{Modify my information}" and then "\emph{Delete my account}" and, in order to confirm his choice, inserts his password, the system then deletes all  Bob’s personal information from the database. Now Bob must register again if he wants to start using \emph{Travlendar+}'s services once more.
 
-\textbf{Scenario 1}\\ Carlo wants to change his password because it does not seem quite strong for him. He opens his \emph{Travlendar+} app, selects "\emph{Show my information}", "\emph{Modify my information}" and then "\emph{Modify password}". He enters his old password and the new password twice. The old password is written correctly, so the system accepts the new password.\\
-\textbf{Scenario 2}\\ Bob does not use very often \emph{Travlendar+}, so he decides to uninstall the app, but first he wants to delete his account. He opens the app, select "\emph{Show my information}", "\emph{Modify my information}" and then "\emph{Delete my account}" and, in order to confirm his choice, inserts his password. The system deletes all the Bob’s personal information from the database. Now Bob must register again to use \emph{Travlendar+} services.
 
-
-\paragraph*{Use Case}
+\paragraph*{Use Case\\}
 The use case is analysed in \autoref{fig:manageaccountuc} and in \autoref{tab:viewaccountusecase}, \autoref{tab:modifypersonalinformation} and in \autoref{tab:deleteaccount}.
 
 \begin{figure}[h]
@@ -650,11 +650,9 @@ The use case is analysed in \autoref{fig:manageaccountuc} and in \autoref{tab:vi
 	\caption{\emph{Delete account} use case description}
 \end{longtable}
 
-
-%Add Use cases----------------------------------------------------
 \clearpage
 \subsection{Performance Requirements}
-Without taking into consideration the speed of the internet connection, in order to guarantee an acceptable user experience the following  requirements must be satisfied:
+Without taking into consideration the speed of the internet connection, in order to guarantee an acceptable user experience the following requirements must be satisfied:
 \begin{itemize}
 \item Navigation between pages of the system must happen in 0.5s or less.
 \item The  best travel plan must be computed in 5s or less.
@@ -662,7 +660,6 @@ Without taking into consideration the speed of the internet connection, in order
 \item No limit of schedulable appointments.
 \item At least 1000 users must be able to use the service at the same time. 
 \end{itemize}
-\newpage
 \subsection{Design Constraints}
 \subsubsection{Standards Compliance}
 The web application must comply with the standards dictated by W3C, while the mobile application must follow the Oracle guidelines for Java programming.
@@ -689,12 +686,10 @@ The system should also be able to process operations in parallel.
 \subsubsection{Reliability}
 Each trip plan computed given the preferences expressed by the user and the weather forecast and strikes must not differ more than 5\% from the optimal travel distance or ETA.
 \subsubsection{Availability}
-The system to be must guarantee an availability of no less than 98\%.
+The system to be must guarantee an availability of no less than 99\%.
 \subsubsection{Safety and Privacy Constraints}
-The user oversees his/her own security while travelling and must grant access to the current location, information about former trips and personal data are stored but only the user itself has access to them.
+The user oversees his/her own security while travelling and must grant access to the current location, information about former trips and personal data are stored but only the user itself has access to them, the password itself is not saved in the database, instead the result of an encryption algorithm on the password is stored to compare it to the result of the same operation once the user inserts it.
 \subsubsection{Maintainability}
 The system must be developed in such a way that future implementation of new features and changes to existing ones can be done seamlessly, in other words the system has to be modular and scalable.
 \subsubsection{Portability}
 As already mentioned in \autoref{sec:SoftwareInterfaces} the software must be available on different configurations, it must be as environment independent as possible, meaning that it has to work on different platforms with the minimum amount of changes to the software itself.
-
-
