@@ -2,6 +2,7 @@
 In this section, it will be described with pseudocode the main algorithms of the system.
 
 \subsubsection{Path Calculation}
+It should be noted that since the system relies on the APIs of \emph{Google Maps} to actually calculate the path, the \textbf{Path Calculator} component only needs to select the vehicles that the user will have to use (given the his/her preferences, owned vehicles, the weather conditions and the eventuality of strikes), this means that (as already stated) it acts more like a \emph{Query Builder} and then selects the best path if more than one is returned.
 \lstinputlisting[language=pseudocode]{Files/PathCalculation.txt}
 
 \subsubsection{Appointment Checking}

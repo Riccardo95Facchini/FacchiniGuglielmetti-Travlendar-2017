@@ -1,2 +1,9 @@
-\paragraph*{Introduction\\}
-Once the system has the couple time-place for both the departure and the arrival, it must take into account all the preferences of the user, weather conditions and public transportation strikes in order to formulate the best possible query that will be forwarded and handled by Google Maps.
+\subsection{Introduction}
+In this section, it will be described with pseudocode the main algorithms of the system.
+
+\subsubsection{Path Calculation}
+It should be noted that since the system relies on the APIs of \emph{Google Maps} to actually calculate the path, the 
+\lstinputlisting[language=pseudocode]{Files/PathCalculation.txt}
+
+\subsubsection{Appointment Checking}
+\lstinputlisting[language=pseudocode]{Files/AppointmentChecking.txt}
