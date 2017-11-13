@@ -1,0 +1,53 @@
+BEGIN CalculatePath(AppointmentInfo)
+
+	//struct for saving additional info
+	AddInfo := AdditionalInfo.GetInfo();
+
+	//struct for saving options to query creation
+	Options := empty;
+
+	//set of the preferred and owned vehicles
+	PreferredVehicles := AddInfo.GetPreferredVehicles();
+	OwnedVehicles := AddInfo.GetOwnedVehicles();
+	Vehicles := empty;
+
+	//set of the travel means striked
+	Striked := AddInfo.GetStrike();
+
+	j := 0
+	FOR	i := 0 TO PreferredVehicles.lenght DO
+		IF PreferredVehicles[i] not in OwnedVehicles & 
+				AddInfo.UserPreferences.EnabledSharing = true THEN
+			Options.SearchSharedVehicles(PreferredVehicles[i]) = true;
+		END-IF
+
+		IF PreferredVehicles[i] = Bycicle & AddInfo.BadWeather = true THEN
+			continue;
+		END-IF
+
+		IF PreferredVehicles[i] in Striked THEN
+			continue
+		END-IF
+
+		Vehicles[j] := PreferredVehicles[i]
+		j++
+	END-FOR
+
+	IF Vehicles.lenght = 0 THEN
+		Vehicles = OwenedVehicle
+	END-IF
+
+	//functions for query creation and forwarding to Google Maps
+	query := prepareQuery(Vehicles, Options, AppointmentInfo)
+	send(query);
+	Result := getResult();
+
+	//function to select the path with minimum ETA and, 
+	//if reduction of CO2 emission is enabled, the path with minimum CO2 
+	//emission.
+	//Decision is based on the AppointmentInfo
+	Path := selectBestPath(Result, AddInfo.CarbonFootprintOption, AppointmentInfo);
+
+	RETURN(Path)
+
+END

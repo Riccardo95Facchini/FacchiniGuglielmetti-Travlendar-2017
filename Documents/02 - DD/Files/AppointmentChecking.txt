@@ -1,0 +1,24 @@
+BEGIN AppointmentChecking(AppointmentInfo, Path)
+
+	//checks if the appointment is in the past or there is 
+	//inconsistency between departure time and starting time
+	IF AppointmentInfo.DepartureTime > AppointemntInfo.StartingTime |
+		AppointmentInfo.DepartureTime < Time.Now | AppointemntInfo.StartingTime < Time.Now THEN
+		return "appointment in the past"
+	END-IF
+
+	//retrieves from the database the event already stored of that user
+	//the search is limited from events that are happenign during the departure time to events
+	//that starts during the progress of the appointment that has to be validated
+	AppointmentsScheduled := ReadEvents(AppointemntInfo)
+
+	IF AppointmentsScheduled.lenght > 0 THEN		
+		return "appointmens overlapping"
+	END-IF
+
+	IF AppointmentInfo.DepartureTime + Path.Duration > AppointmentInfo THEN
+		return "the appointment location cannot be reached in time"
+	END-IF
+
+	return ok
+END

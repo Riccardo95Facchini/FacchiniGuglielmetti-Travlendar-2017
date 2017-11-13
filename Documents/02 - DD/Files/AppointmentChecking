@@ -1,0 +1,6 @@
+BEGIN AppointmentChecking(AppointmentInfo, Path)
+
+	IF  THEN
+	END-IF
+
+END
