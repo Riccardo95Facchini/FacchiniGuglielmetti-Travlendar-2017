@@ -46,7 +46,7 @@ Everything in this project is free to use.
 <!-- CONTACT -->
 ## Contact
 
-Riccardo Facchini - [LinkedIn](https://www.linkedin.com/in/riccardo-facchini-1a8206194/) - [E-mail](riccardo95facchini@gmail.com)
+Riccardo Facchini - [LinkedIn](https://www.linkedin.com/in/riccardo-facchini-1a8206194/) - riccardo95facchini@gmail.com
 
 <!-- CONTRIBUTORS -->
 ## Contributors
