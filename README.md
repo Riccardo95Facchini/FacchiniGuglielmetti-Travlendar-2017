@@ -57,4 +57,4 @@ Riccardo Facchini - [LinkedIn](https://www.linkedin.com/in/riccardo-facchini-1a8
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 [contributors-shield]: https://img.shields.io/github/contributors/Riccardo95Facchini/FacchiniGuglielmetti-Travlendar-2017
-[contributors-url]: https://github.com/Riccardo95Facchini/BobTheChameleon/graphs/contributors
+[contributors-url]: https://github.com/Riccardo95Facchini/FacchiniGuglielmetti-Travlendar-2017/graphs/contributors
